@@ -1,0 +1,110 @@
+@import '../../../../assets/sass/variables';
+
+.business-card-component {
+
+  // Layout
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 350px;
+  height: auto;
+  border-radius: 2px;
+
+  // Styling
+  background-color: $color-gray-4;
+  border: 8px solid $color-gray-2;
+
+  transition: .5s;
+
+  &:hover {
+    // Styling
+    border: 8px solid $color-purple-2;
+  }
+
+  // Inner Elements
+  &>* {
+    position: relative;
+  }
+
+
+  .profile {
+    margin: 1rem;
+    // text-align: center;
+
+
+    img.photo {
+      // Layout
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
+
+      border-radius: 4px;
+    }
+
+    h1.name {
+      margin: 0;
+      margin-top: .5rem;
+      font-size: 1.5rem;
+      color: $color-gray-1;
+    }
+
+    h2.bio {
+      font-size: .85rem;
+      font-weight: 100;
+      color: $color-gray-2;
+
+      text-align: justify;
+    }
+
+    .social-list {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px dashed $color-gray-3;
+
+      .social-icon {
+        width: 2.3rem;
+        height: 2.3rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid $color-purple-2;
+        border-radius: 1px;
+
+        cursor: pointer;
+
+        a {
+          color: $color-purple-2;
+        }
+
+        &:hover {
+          a {
+            color: $color-purple-1;
+          }
+
+          border: 1px solid $color-purple-1;
+        }
+
+        // @media (max-width: $small-device-width) {
+        //   width: 2rem;
+        //   height: 2rem;
+
+        //   a {
+        //     font-size: .6rem;
+        //   }
+        // }
+      }
+    }
+  }
+
+  // Medium devices' Resolution
+  @media (max-width: $medium-device-width) {
+    width: calc(100vw - 4rem);
+  }
+}
