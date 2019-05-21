@@ -206,13 +206,12 @@ a {
   -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   border-bottom: dotted 1px;
-  color: #49bf9d;
   text-decoration: none;
 }
 
 a:hover {
   border-bottom-color: transparent;
-  color: #49bf9d !important;
+  color: #574b90 !important;
   text-decoration: none;
 }
 
@@ -1935,7 +1934,7 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #49bf9d;
+  border-color: #574b90;
 }
 
 select {
@@ -2035,7 +2034,7 @@ input[type="radio"]:checked + label:before {
 
 input[type="checkbox"]:focus + label:before,
 input[type="radio"]:focus + label:before {
-  border-color: #49bf9d;
+  border-color: #574b90;
 }
 
 input[type="checkbox"] + label:before {
@@ -2542,8 +2541,8 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:hover {
-  border-color: #49bf9d;
-  color: #49bf9d !important;
+  border-color: #574b90;
+  color: #574b90 !important;
 }
 
 input[type="submit"]:active,
@@ -2551,8 +2550,8 @@ input[type="reset"]:active,
 input[type="button"]:active,
 .button:active {
   background-color: rgba(73, 191, 157, 0.1);
-  border-color: #49bf9d;
-  color: #49bf9d !important;
+  border-color: #574b90;
+  color: #574b90 !important;
 }
 
 input[type="submit"].icon,
@@ -2595,8 +2594,8 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,
 .button.primary {
-  background-color: #49bf9d;
-  border-color: #49bf9d;
+  background-color: #574b90;
+  border-color: #574b90;
   color: #ffffff !important;
 }
 
@@ -3273,7 +3272,7 @@ body.is-touch .poptrox-popup .closer {
   /* Header */
 
   #header {
-    padding: 4.5em 1.5em;
+	padding: 4.5em 1.5em;
   }
 
   #header h1 br {
