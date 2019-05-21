@@ -259,7 +259,7 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 0.8em;
 }
 
 h3 {
@@ -1864,9 +1864,9 @@ header p {
 }
 
 header h2 + p {
-  font-size: 1.25em;
+  font-size: 0.85em;
   margin-top: -1em;
-  line-height: 1.5em;
+  line-height: 0.85em;
 }
 
 header h3 + p {
@@ -3272,7 +3272,7 @@ body.is-touch .poptrox-popup .closer {
   /* Header */
 
   #header {
-	padding: 4.5em 1.5em;
+    padding: 4.5em 1.5em;
   }
 
   #header h1 br {
