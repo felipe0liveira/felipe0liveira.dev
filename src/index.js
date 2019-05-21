@@ -14,7 +14,7 @@
                     postsListTemplate +=
                         `
                     <article class="col-6 col-12-xsmall work-item">
-                        <a data-gtm-category="Artigos" data-gtm-value="thumbnail/${post.title}" href="${post.thumbnail}" class="google-tag-manager image fit thumb" style="background-image: url(${post.thumbnail})"></a>
+                        <a data-gtm-category="Artigos" data-gtm-value="thumbnail/${post.title}" href="${post.link}" target="_blank" class="google-tag-manager image fit thumb" style="background-image: url(${post.thumbnail})"></a>
                         <h3><a data-gtm-category="Artigos" data-gtm-value="link/${post.title}" href="${post.link}" class="google-tag-manager" target="_blank">${post.title}</a></h3>
                         <p>${post.pubDate}</p>
 				    </article>`;
