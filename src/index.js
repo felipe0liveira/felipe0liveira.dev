@@ -1,5 +1,5 @@
 (() => {
-    console.log('Welcome to felipe0liveira.dev');
+    console.log('Welcome to felipe0liveira.dev');    
 
     function loadPosts() {
         const host = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@felpd3v";
@@ -24,7 +24,7 @@
                     });
 
                     $('#postsList').html(postsListTemplate);
-                    $('section#posts').fadeIn(200);
+                    $('section.posts').fadeIn(200);
                 }
 
             }
