@@ -4,7 +4,7 @@ Galera, posso confessar que a construção desse site foi uma aventura. Em breve
 
 Garanto que tem muita issue por vir. 
 
-Utilizei uma lib muito legal chamada `98.css` . 
+Utilizei uma lib muito legal chamada `98.css`.  
 
 Sintam-se à vontade para explorar <3  
 
