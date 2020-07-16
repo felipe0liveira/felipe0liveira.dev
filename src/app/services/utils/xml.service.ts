@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class XMLService {
-
-  constructor() { }
+  constructor() {}
 
   toJson(xml: string): Document {
     const oParser = new DOMParser();
-    const oDOM = oParser.parseFromString(xml, "application/xml");
+    const oDOM = oParser.parseFromString(xml, 'application/xml');
     return oDOM;
   }
 }

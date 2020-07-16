@@ -5,21 +5,21 @@ import { Observable } from 'rxjs';
 import { Article } from 'src/app/interfaces/article.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BlogService {
-
   $articles: Observable<Article[]>;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   updatePublishedArticles() {
-    const params = new HttpParams()
-      .append('username', 'felipe0liveira');
+    const params = new HttpParams().append('username', 'felipe0liveira');
 
-    this.http.get(`${environment.devTo.articles}`, { params }).subscribe(res => {
-      this.$articles = new Observable((observer) => {
-        observer.next(res as Article[]);
+    this.http
+      .get(`${environment.devTo.articles}`, { params })
+      .subscribe((res) => {
+        this.$articles = new Observable((observer) => {
+          observer.next(res as Article[]);
+        });
       });
-    });
   }
 }

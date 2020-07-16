@@ -7,13 +7,13 @@ import { Pen } from './interfaces/codepen.interface';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-
-  constructor(public blogService: BlogService, public codepenService: CodepenService) {
-
-  }
+  constructor(
+    public blogService: BlogService,
+    public codepenService: CodepenService
+  ) {}
 
   ngOnInit(): void {
     this.blogService.updatePublishedArticles();
@@ -35,7 +35,6 @@ export class AppComponent implements OnInit {
   }
 
   minimizeWindow() {
-    alert('Sério?\nVocê achou mesmo que ia minimizar?')
+    alert('Sério?\nVocê achou mesmo que ia minimizar?');
   }
 }
-
