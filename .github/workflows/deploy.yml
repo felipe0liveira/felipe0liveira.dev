@@ -10,21 +10,21 @@ jobs:
 
     steps:
       - name: Go to branch 'master'
-      - uses: actions/checkout@master
-          
+        uses: actions/checkout@master
+
       - name: Use NodeJs v10.x
-      - uses: actions/setup-node@master
+        uses: actions/setup-node@master
         with:
           node-version: '10.x'
 
       - name: Install project dependencies
-      - run: npm install
+        run: npm install
 
       - name: Build application in production environment
-      - run: npm run build:prod
+        run: npm run build:prod
 
       - name: Deploy to firebase
-      - uses: w9jds/firebase-action@master
+        uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
         env:

@@ -10,18 +10,18 @@ on:
 
         steps:
           - name: Go to branch 'master'
-          - uses: actions/checkout@master
+            uses: actions/checkout@master
 
           - name: Use NodeJs v10.x
-          - uses: actions/setup-node@master
+            uses: actions/setup-node@master
             with:
               node-version: '10.x'
 
           - name: Install project dependencies
-          - run: npm install
+            run: npm install
 
           - name: Try to build application in production environment
-          - run: npm run build:prod
+            run: npm run build:prod
 
           - name: Check Files Code Format with Prettier
-          - run: npm run lint
+            run: npm run lint
