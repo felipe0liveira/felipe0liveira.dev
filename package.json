@@ -2,9 +2,8 @@
   "name": "win98-website",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build:prod": "ng build --prod",
     "deploy": "firebase deploy"
   },
   "private": true,
