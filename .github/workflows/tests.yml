@@ -4,24 +4,24 @@ on:
   push:
     branches: [master]
 
-    jobs:
-      firebase-deploy:
-        runs-on: ubuntu-latest
+jobs:
+    validation:
+    runs-on: ubuntu-latest
 
-        steps:
-          - name: Go to branch 'master'
-            uses: actions/checkout@master
+    steps:
+        - name: Go to branch 'master'
+        uses: actions/checkout@master
 
-          - name: Use NodeJs v10.x
-            uses: actions/setup-node@master
-            with:
-              node-version: '10.x'
+        - name: Use NodeJs v10.x
+        uses: actions/setup-node@master
+        with:
+            node-version: '10.x'
 
-          - name: Install project dependencies
-            run: npm install
+        - name: Install project dependencies
+        run: npm install
 
-          - name: Try to build application in production environment
-            run: npm run build:prod
+        - name: Try to build application in production environment
+        run: npm run build:prod
 
-          - name: Check Files Code Format with Prettier
-            run: npm run lint
+        - name: Check Files Code Format with Prettier
+        run: npm run lint
