@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        - name: Go to branch 'master'
+        - name: Go to branch master
         uses: actions/checkout@master
 
         - name: Use NodeJs v10.x
