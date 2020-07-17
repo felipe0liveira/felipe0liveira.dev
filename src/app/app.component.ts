@@ -7,7 +7,7 @@ import { WindowsService } from './services/windows-service/windows.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(public windowsService: WindowsService) { }
+  constructor(public windowsService: WindowsService) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }

@@ -6,11 +6,13 @@ import { WindowsService } from 'src/app/services/windows-service/windows.service
 @Component({
   selector: 'app-codepen',
   templateUrl: './codepen.component.html',
-  styleUrls: ['./codepen.component.scss']
+  styleUrls: ['./codepen.component.scss'],
 })
 export class CodepenComponent implements OnInit {
-
-  constructor(public windowsService: WindowsService, public codepenService: CodepenService) { }
+  constructor(
+    public windowsService: WindowsService,
+    public codepenService: CodepenService
+  ) {}
 
   ngOnInit(): void {
     this.codepenService.updatePublishedPens(`felipe0liveira`);
@@ -19,5 +21,4 @@ export class CodepenComponent implements OnInit {
   goToPen(pen: Pen) {
     window.open(pen.link, '_blank');
   }
-
 }

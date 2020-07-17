@@ -1,8 +1,13 @@
 <div class="window">
   <div class="title-bar">
-    <div class="title-bar-text"><i class="fa fa-codepen mx-1"></i> Codepen.io</div>
+    <div class="title-bar-text">
+      <i class="fa fa-codepen mx-1"></i> Codepen.io
+    </div>
     <div class="title-bar-controls">
-      <button aria-label="Minimize" (click)="windowsService.minimize()"></button>
+      <button
+        aria-label="Minimize"
+        (click)="windowsService.minimize()"
+      ></button>
       <button aria-label="Maximize"></button>
       <button aria-label="Close" (click)="windowsService.close()"></button>
     </div>

@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WindowsService {
-
-  constructor() { }
+  constructor() {}
 
   close() {
     if (confirm('Deseja realmente fechar esta janela?')) {
