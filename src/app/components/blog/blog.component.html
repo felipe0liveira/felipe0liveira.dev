@@ -1,0 +1,29 @@
+<div class="window">
+  <div class="title-bar">
+    <div class="title-bar-text"><i class="fa fa-rss mx-1"></i> Blog</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" (click)="windowsService.minimize()"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close" (click)="windowsService.close()"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <div class="articles">
+      <div
+        class="article"
+        *ngFor="let article of blogService.$articles | async"
+      >
+        <button type="button" (click)="goToArticle(article)">
+          <h1 class="title">{{ article.title }}</h1>
+          <p class="description">{{ article?.description }}</p>
+
+          <hr />
+
+          <p class="info">
+            {{ article.published_at | date: 'dd/MM/yy' }}
+          </p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

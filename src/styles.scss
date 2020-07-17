@@ -13,4 +13,53 @@ body {
       color: #000000;
     }
   }
+
+  .container {
+    .window {
+      margin-bottom: 16px;
+      .window {
+        margin: 0;
+
+        .window-body {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      .window-body {
+        img {
+          width: 100%;
+        }
+
+        .icons-list {
+          margin: 5px;
+          a,
+          a:visited {
+            color: #7c7c7c;
+            margin-right: 10px;
+            font-size: 16px;
+            outline: none;
+
+            &:hover {
+              color: #333;
+            }
+
+            &:active {
+              color: #222;
+            }
+          }
+        }
+
+        .title {
+          font-family: 'Press Start 2P', cursive !important;
+          font-size: 15px;
+          margin: 20px 0 0 0;
+        }
+
+        .subtitle {
+          font-size: 10px;
+          font-weight: 100;
+        }
+      }
+    }
+  }
 }
