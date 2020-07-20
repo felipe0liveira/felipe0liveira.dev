@@ -1,0 +1,49 @@
+<div class="window">
+  <div class="title-bar">
+    <div class="title-bar-text">
+      <i class="fa fa-comments-o mx-1"></i> Contato
+    </div>
+    <div class="title-bar-controls">
+      <button
+        aria-label="Minimize"
+        (click)="windowsService.minimize()"
+      ></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close" (click)="windowsService.close()"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <form>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="field-row-stacked mb-2">
+            <label for="name">Nome</label>
+            <input id="name" type="text" />
+          </div>
+          <div class="field-row-stacked mb-2">
+            <label for="email">Email</label>
+            <input id="email" type="text" />
+          </div>
+          <div class="field-row-stacked mb-2">
+            <label for="phone">Celular</label>
+            <input id="phone" type="text" />
+          </div>
+          <div class="field-row-stacked mb-2">
+            <input type="checkbox" id="whatsapp" disabled />
+            <label for="whatsapp">Desejo ser contatado via Whatsapp</label>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="field-row-stacked message-textarea">
+            <label for="message">Mensagem</label>
+            <textarea id="message" class="h-100"></textarea>
+          </div>
+        </div>
+
+        <div class="col-12 mt-3 d-flex justify-content-end">
+          <button disabled="disabled">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

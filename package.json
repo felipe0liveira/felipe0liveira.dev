@@ -5,7 +5,8 @@
     "start": "ng serve",
     "build:prod": "ng build --prod",
     "deploy": "firebase deploy",
-    "lint": "prettier --check \"src/**/*.*\""
+    "lint": "prettier --check \"src/**/*.*\"",
+    "prettify": "prettier --write \"src/**/*.*\""
   },
   "husky": {
     "hooks": {
