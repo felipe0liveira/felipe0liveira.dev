@@ -1,0 +1,7 @@
+<p>marketplace works!</p>
+
+<ul>
+  <li *ngFor="let product of marketplaceService.productList | async">
+    {{ product | json }}
+  </li>
+</ul>
