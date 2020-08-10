@@ -6,12 +6,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ManagerOutletComponent } from './manager-outlet/manager-outlet.component';
 import { MarketplaceComponent } from './components/marketplace/marketplace.component';
 
-
 @NgModule({
-  declarations: [DashboardComponent, ManagerOutletComponent, MarketplaceComponent],
-  imports: [
-    CommonModule,
-    ManagerRoutingModule
-  ]
+  declarations: [
+    DashboardComponent,
+    ManagerOutletComponent,
+    MarketplaceComponent,
+  ],
+  imports: [CommonModule, ManagerRoutingModule],
 })
-export class ManagerModule { }
+export class ManagerModule {}
