@@ -9,28 +9,58 @@ import { Product } from 'src/app/interfaces/product.interface';
   providedIn: 'root',
 })
 export class MarketplaceService {
-  productList: Observable<Product[]>;
-  constructor(private database: AngularFireDatabase) {}
+  $products: Observable<Product[]>;
+  $availableProducts: Observable<Product[]>;
+  busy: boolean;
+  constructor(private database: AngularFireDatabase) {
+    this.busy = false;
+  }
 
-  update() {
-    this.database.database
-      .ref('marketplace/products')
-      .on('value', (snapshot) => {
+  refresh() {
+    this.busy = true;
+    this.database.database.ref('marketplace/products').once(
+      'value',
+      (snapshot) => {
         const databaseProducts = snapshot.val();
         const products: Product[] = [];
         for (const key in databaseProducts) {
+          databaseProducts[key].id = key;
           products.push(databaseProducts[key]);
         }
-        this.productList = new Observable((o) => o.next(products));
-      });
+        this.$products = new Observable((o) => o.next(products));
+        this.$availableProducts = new Observable((o) =>
+          o.next(products.filter((p) => p.status))
+        );
+        this.busy = false;
+      },
+      (_) => (this.busy = false)
+    );
   }
 
-  insert(product: Product) {
+  insert(product: Product): void {
+    this.busy = true;
     this.database
       .list('marketplace/products')
       .push(product)
-      .then((result) => {
-        console.log('insert', result);
-      });
+      .then(() => this.refresh())
+      .finally(() => (this.busy = false));
+  }
+
+  update(product: Product, key: string): void {
+    this.busy = true;
+    this.database.database
+      .ref(`marketplace/products/${key}`)
+      .update(product)
+      .then(() => this.refresh())
+      .finally(() => (this.busy = false));
+  }
+
+  delete(key: string): void {
+    this.busy = true;
+    this.database.database
+      .ref(`marketplace/products/${key}`)
+      .remove()
+      .then(() => this.refresh())
+      .finally(() => (this.busy = false));
   }
 }

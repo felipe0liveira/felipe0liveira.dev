@@ -2,7 +2,7 @@
   "name": "win98-website",
   "version": "0.0.0",
   "scripts": {
-    "dev": "ng serve",
+    "dev": "ng serve --host 0.0.0.0",
     "build:prod": "ng build --prod",
     "deploy": "firebase deploy",
     "lint": "prettier --check \"src/**/*.*\"",
