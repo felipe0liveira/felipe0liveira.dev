@@ -7,6 +7,7 @@ import {
 } from '@angular/router';
 import { SignUser } from 'src/app/interfaces/sign-user.interface';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -57,7 +58,16 @@ export class AuthGuard implements CanActivateChild {
     state: RouterStateSnapshot
   ): Promise<boolean> {
     try {
-      return await this.authService.status();
+      const authStatus = await this.authService.status();
+      if (!environment.production) {
+        console.log(
+          `User ${
+            authStatus ? 'is' : "isn't"
+          } authenticated!\nEnvironment bypass...`
+        );
+        return true;
+      }
+      return authStatus;
     } catch (error) {
       console.log("You're not authenticated!\nRedirecting to Home...", error);
       window.location.href = '/';
