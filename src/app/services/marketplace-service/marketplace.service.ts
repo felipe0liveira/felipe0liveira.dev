@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { ArrayService } from '../utils/array.service';
 
 import { Product } from 'src/app/interfaces/product.interface';
 
@@ -12,7 +12,10 @@ export class MarketplaceService {
   $products: Observable<Product[]>;
   $availableProducts: Observable<Product[]>;
   busy: boolean;
-  constructor(private database: AngularFireDatabase) {
+  constructor(
+    private database: AngularFireDatabase,
+    public arrayService: ArrayService
+  ) {
     this.busy = false;
   }
 
@@ -28,9 +31,11 @@ export class MarketplaceService {
           products.push(databaseProducts[key]);
         }
         this.$products = new Observable((o) => o.next(products));
-        this.$availableProducts = new Observable((o) =>
-          o.next(products.filter((p) => p.status))
-        );
+        this.$availableProducts = new Observable((o) => {
+          let availableProducts = products.filter((p) => p.status);
+          availableProducts = this.arrayService.shuffle(availableProducts);
+          o.next(availableProducts);
+        });
         this.busy = false;
       },
       (_) => (this.busy = false)
@@ -39,6 +44,7 @@ export class MarketplaceService {
 
   insert(product: Product): void {
     this.busy = true;
+    product.update_time = new Date().getTime().toString();
     this.database
       .list('marketplace/products')
       .push(product)
