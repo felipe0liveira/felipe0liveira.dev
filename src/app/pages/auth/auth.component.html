@@ -19,7 +19,13 @@
             </div>
             <div class="field-row-stacked">
               <div class="d-flex justify-content-end">
-                <button><i class="fa fa-spinner fa-spin fa-pulse" *ngIf="authService.busy"></i> Sign In</button>
+                <button>
+                  <i
+                    class="fa fa-spinner fa-spin fa-pulse"
+                    *ngIf="authService.busy"
+                  ></i>
+                  Sign In
+                </button>
               </div>
             </div>
           </form>

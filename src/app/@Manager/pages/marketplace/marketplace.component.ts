@@ -56,9 +56,7 @@ export class MarketplaceComponent implements OnInit {
       confirm(
         `Are you sure that you want to ${
           !editingProduct.status ? 'enable' : 'disable'
-        } the product status?\n\nProduct Detail\n${
-          editingProduct.title
-        }`
+        } the product status?\n\nProduct Detail\n${editingProduct.title}`
       )
     ) {
       const _editingKey = editingProduct.id;
