@@ -22,7 +22,13 @@
       width: 100%;
 
       span {
+        height: 15px;
+        max-width: calc(100% - 45px);
         font-weight: bold;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
 
