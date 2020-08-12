@@ -1,0 +1,15 @@
+.window-body {
+  margin: 0;
+  padding: 10px;
+
+  .product {
+    .product-title {
+      height: 13px;
+      width: 120px;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

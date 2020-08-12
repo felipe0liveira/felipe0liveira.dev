@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">
+        <i class="fa fa-spinner fa-spin fa-pulse" *ngIf="busy()"></i
+        ><i class="fa fa-cog mx-1" *ngIf="!busy()"></i> Manager
+      </div>
+      <div class="title-bar-controls">
+        <button
+          aria-label="Close"
+          (click)="goTo('/manager/dashboard')"
+        ></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

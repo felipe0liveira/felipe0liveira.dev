@@ -2,7 +2,7 @@
   "name": "win98-website",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve",
+    "dev": "ng serve --host 0.0.0.0",
     "build:prod": "ng build --prod",
     "deploy": "firebase deploy",
     "lint": "prettier --check \"src/**/*.*\"",
@@ -10,7 +10,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run build:prod"
+      "pre-commit": "npm run lint"
     }
   },
   "private": true,
@@ -20,10 +20,12 @@
     "@angular/common": "~9.0.7",
     "@angular/compiler": "~9.0.7",
     "@angular/core": "~9.0.7",
+    "@angular/fire": "^6.0.2",
     "@angular/forms": "~9.0.7",
     "@angular/platform-browser": "~9.0.7",
     "@angular/platform-browser-dynamic": "~9.0.7",
     "@angular/router": "~9.0.7",
+    "firebase": "^7.17.2",
     "font-awesome": "^4.7.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

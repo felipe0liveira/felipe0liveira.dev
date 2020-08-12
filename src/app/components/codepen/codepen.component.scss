@@ -1,7 +1,8 @@
 .pens {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 15px;
+
   .pen {
     button {
       width: 100% !important;

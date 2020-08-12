@@ -1,0 +1,39 @@
+<div class="window" *ngIf="marketplaceService.$products">
+  <div class="title-bar">
+    <div class="title-bar-text">
+      <i class="fa fa-heart-o mx-1"></i> Minhas recomendações
+    </div>
+    <div class="title-bar-controls">
+      <button
+        aria-label="Minimize"
+        (click)="windowsService.minimize()"
+      ></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close" (click)="windowsService.close()"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <div class="products">
+      <button
+        type="button"
+        class="product"
+        *ngFor="let product of marketplaceService.$availableProducts | async"
+        (click)="goToProduct(product)"
+      >
+        <p class="product-title">
+          <span>{{ product.title }}</span>
+          <a [href]="product.link" target="_blank">Visitar</a>
+        </p>
+        <hr />
+        <div class="product-content">
+          <div class="product-image">
+            <img [src]="product.photo" [alt]="product.title" />
+          </div>
+          <p class="product-description">
+            {{ product.description }}
+          </p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
