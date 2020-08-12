@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class AuthComponent implements OnInit {
   signInForm: FormGroup;
   constructor(public authService: AuthService, private router: Router) {
+    document.title = 'Felipe 0liveira - Manager/Auth (Win98)';
     this.signInForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [

@@ -18,6 +18,7 @@ export class MarketplaceComponent implements OnInit {
     public marketplaceService: MarketplaceService,
     public categoryService: CategoryService
   ) {
+    document.title = 'Felipe 0liveira - Manager/Marketplace (Win98)';
     this.formAction = 'insert';
     this.editingKey = '';
     this.productForm = new FormGroup({

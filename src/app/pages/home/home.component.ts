@@ -7,7 +7,9 @@ import { WindowsService } from 'src/app/services/windows-service/windows.service
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(public windowsService: WindowsService) {}
+  constructor(public windowsService: WindowsService) {
+    document.title = 'Felipe 0liveira (Win98)';
+  }
 
   ngOnInit(): void {}
 }
