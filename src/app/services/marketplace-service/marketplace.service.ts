@@ -4,18 +4,22 @@ import { Observable } from 'rxjs';
 import { ArrayService } from '../utils/array.service';
 
 import { Product } from 'src/app/interfaces/product.interface';
+import { CategoryService } from 'src/app/@Manager/services/category.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MarketplaceService {
   $products: Observable<Product[]>;
-  $availableProducts: Observable<Product[]>;
+  $availableProducts: Observable<Product[]>[];
   busy: boolean;
+
   constructor(
     private database: AngularFireDatabase,
-    public arrayService: ArrayService
+    public arrayService: ArrayService,
+    public categoryService: CategoryService
   ) {
+    this.$availableProducts = [];
     this.busy = false;
   }
 
@@ -31,11 +35,16 @@ export class MarketplaceService {
           products.push(databaseProducts[key]);
         }
         this.$products = new Observable((o) => o.next(products));
-        this.$availableProducts = new Observable((o) => {
-          let availableProducts = products.filter((p) => p.status);
-          availableProducts = this.arrayService.shuffle(availableProducts);
-          o.next(availableProducts);
-        });
+        for (let category of this.categoryService.categories) {
+          this.$availableProducts[category.value] = new Observable((o) => {
+            let availableProducts = products.filter(
+              (p) => p.status && p.category === category.value
+            );
+            availableProducts = this.arrayService.shuffle(availableProducts);
+            o.next(availableProducts);
+          });
+        }
+
         this.busy = false;
       },
       (_) => (this.busy = false)

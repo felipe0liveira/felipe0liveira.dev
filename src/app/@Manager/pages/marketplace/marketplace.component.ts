@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MarketplaceService } from 'src/app/services/marketplace-service/marketplace.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Product } from 'src/app/interfaces/product.interface';
+import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-marketplace',
@@ -13,10 +14,14 @@ export class MarketplaceComponent implements OnInit {
   formAction: string;
   editingKey: string;
 
-  constructor(public marketplaceService: MarketplaceService) {
+  constructor(
+    public marketplaceService: MarketplaceService,
+    public categoryService: CategoryService
+  ) {
     this.formAction = 'insert';
     this.editingKey = '';
     this.productForm = new FormGroup({
+      category: new FormControl('', [Validators.required]),
       title: new FormControl('', [Validators.required]),
       link: new FormControl('', [Validators.required]),
       photo: new FormControl('', [Validators.required]),
@@ -38,6 +43,7 @@ export class MarketplaceComponent implements OnInit {
 
     this.productForm.reset();
     this.productForm.controls['status'].setValue(true);
+    this.productForm.controls['category'].setValue('');
   }
 
   edit(product: Product): void {

@@ -4,6 +4,7 @@ export interface Product {
   description: string;
   photo: string;
   link: string;
+  category: string;
   status?: boolean;
   update_time?: string;
 }

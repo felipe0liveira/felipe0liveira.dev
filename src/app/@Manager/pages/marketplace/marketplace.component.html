@@ -18,8 +18,16 @@
                 (change)="changeStatus(product)"
               />
               <label [for]="product.id">
-                <span class="product-title">{{ product.title }}</span></label
-              ><span>-</span><a (click)="edit(product)" class="ml-2">Edit</a>
+                <span class="product-title">
+                  <i
+                    class="fa fa-{{
+                      categoryService.getIconByValue(product.category)
+                    }} mr-2"
+                  ></i>
+                  {{ product.title }}
+                </span>
+              </label>
+              <span>-</span><a (click)="edit(product)" class="ml-2">Edit</a>
             </div>
           </div>
         </div>
@@ -34,9 +42,26 @@
       </div>
       <div class="window-body">
         <form [formGroup]="productForm" (ngSubmit)="submit()" novalidate>
-          <div class="field-row-stacked">
-            <label for="title">Title</label>
-            <input id="title" formControlName="title" type="text" />
+          <div class="row mb-2">
+            <div class="col-7 col-md-9">
+              <div class="field-row-stacked">
+                <label for="title">Title</label>
+                <input id="title" formControlName="title" type="text" />
+              </div>
+            </div>
+            <div class="col-5 col-md-3 pl-0">
+              <div class="field-row-stacked">
+                <label for="category">Category</label>
+                <select id="category" formControlName="category">
+                  <option value="" disabled>Select...</option>
+                  <option
+                    *ngFor="let category of categoryService.categories"
+                    [value]="category.value"
+                    >{{ category.name }}</option
+                  >
+                </select>
+              </div>
+            </div>
           </div>
           <div class="field-row-stacked">
             <label for="link">Link</label>
