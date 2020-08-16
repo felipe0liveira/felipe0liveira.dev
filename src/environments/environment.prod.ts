@@ -1,5 +1,8 @@
 export const environment = {
   production: false,
+  github: {
+    repos: 'https://api.github.com/users/felipe0liveira/repos',
+  },
   devTo: {
     articles: 'https://dev.to/api/articles',
   },
