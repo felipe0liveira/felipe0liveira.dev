@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 import { MarketplaceComponent } from './components/marketplace/marketplace.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AuthComponent } from './pages/auth/auth.component';
+import { GithubComponent } from './components/github/github.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AuthComponent } from './pages/auth/auth.component';
     MarketplaceComponent,
     HomeComponent,
     AuthComponent,
+    GithubComponent,
   ],
   imports: [
     BrowserModule,
