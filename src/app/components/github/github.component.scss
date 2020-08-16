@@ -1,0 +1,29 @@
+.window {
+  .window-body {
+    max-height: 140px;
+    overflow: auto;
+    margin: 0;
+    padding: 0 15px 15px 15px;
+
+    .repositories {
+      .repository {
+        display: flex;
+        flex-direction: column;
+        p {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0;
+
+          span {
+            color: #3d3d3d;
+          }
+        }
+
+        small {
+          margin-bottom: 5px;
+          color: #6d6d6d;
+        }
+      }
+    }
+  }
+}
