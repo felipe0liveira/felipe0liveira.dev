@@ -25,7 +25,7 @@ jobs:
       - name: Build application in production environment
         run: |
           echo Building in production environment
-          npm run build:prod
+          npm run build:static
 
       - name: Deploy to firebase
         uses: w9jds/firebase-action@master

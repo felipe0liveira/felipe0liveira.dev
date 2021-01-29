@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/win98-website",
+    "public": "src/out",
     "ignore": [
       "firebase.json",
       "**/.*",

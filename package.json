@@ -4,7 +4,8 @@
   "description": "My personal landing page",
   "main": "src/index.js",
   "scripts": {
-    "dev": "next src/"
+    "dev": "next src/",
+    "build:static": "next build src/ && next export src/"
   },
   "repository": {
     "type": "git",
