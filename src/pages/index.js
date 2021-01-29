@@ -8,9 +8,9 @@ const Index = () => {
   return (
     <>
       <div className={styles.page}>
-        {/* {showLoader ? <Loader /> : null} */}
+        {/* Avatar */}
         <button type='button' className={styles.title}>
-          <h3>felipe0liveira.dev</h3>
+          felipe0liveira.dev
         </button>
 
         {/* Bem vindo */}
@@ -175,17 +175,21 @@ const Index = () => {
             <hr />
 
             <p>
-              <strong>Chave</strong>
-              <span>78b5b317-1d82-4b3f-82cb-e04d1b3b7329</span>
+              <small>Chave</small>
+              <br />
+              <small>
+                <i>78b5b317-1d82-4b3f-82cb-e04d1b3b7329</i>
+              </small>
             </p>
           </div>
         </Window>
 
-        <hr />
-
-        <button type='button' onClick={deletePage}>
-          dev purposes: delete page
-        </button>
+        <section>
+          <hr className='mobile' />
+          <button type='button' onClick={deletePage}>
+            dev purposes: delete page
+          </button>
+        </section>
       </div>
     </>
   )
