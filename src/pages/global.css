@@ -1,0 +1,25 @@
+* {
+  outline: none;
+  margin: 0;
+}
+
+body {
+  background: #c0c0c0;
+}
+
+.window {
+  margin-bottom: 15px;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+ul.tree-view li a {
+  color: #c20031;
+  text-decoration: underline;
+}

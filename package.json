@@ -1,0 +1,38 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "My personal landing page",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "next src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipe0liveira/landing-page.git"
+  },
+  "keywords": [
+    "landing",
+    "page",
+    "next",
+    "react"
+  ],
+  "author": "@felipe0liveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipe0liveira/landing-page/issues"
+  },
+  "homepage": "https://github.com/felipe0liveira/landing-page#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "98.css": "^0.1.16",
+    "font-awesome": "^4.7.0",
+    "next": "^10.0.5",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
