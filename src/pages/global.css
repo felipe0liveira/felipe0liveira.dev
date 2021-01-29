@@ -23,3 +23,17 @@ ul.tree-view li a {
   color: #c20031;
   text-decoration: underline;
 }
+
+/* Desktop Stylesheet */
+@media screen and (min-width: 700px) {
+  p {
+    font-size: 13px;
+  }
+  .window {
+    margin-bottom: 0;
+  }
+
+  section {
+    display: none;
+  }
+}

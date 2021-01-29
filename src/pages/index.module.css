@@ -16,7 +16,7 @@
   background-position: center;
   filter: grayscale(100%);
 
-  border: 3px solid #969696;
+  font-size: 30px;
 }
 
 .QRCode {
@@ -32,4 +32,26 @@
 .QRCode img {
   width: 60%;
   mix-blend-mode: darken;
+}
+
+/* Desktop Stylesheet */
+@media screen and (min-width: 700px) {
+  .page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+
+    padding: 15px 28%;
+  }
+
+  .title {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+
+    padding: 0;
+    margin-bottom: 0;
+    text-align: center;
+    color: #272727;
+  }
 }
