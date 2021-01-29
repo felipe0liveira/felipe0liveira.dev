@@ -1,11 +1,21 @@
 import Head from 'next/head'
+import TagManager from 'react-gtm-module'
 
 // CSS Libs
 import '98.css'
 import 'font-awesome/css/font-awesome.css'
 import './global.css'
+import { useEffect } from 'react'
 
 const App = ({ Component, pageProps }) => {
+  useEffect(() => {
+    // TagManager
+    const tagManagerArgs = {
+      gtmId: 'GTM-5XCHHG7',
+    }
+    TagManager.initialize(tagManagerArgs)
+  })
+
   return (
     <>
       <Head>
