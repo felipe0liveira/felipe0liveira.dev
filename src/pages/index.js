@@ -9,13 +9,9 @@ const Index = () => {
     <>
       <div className={styles.page}>
         {/* Avatar */}
-        <button type='button' className={styles.title}>
-          felipe0liveira.dev
-        </button>
-
-        {/* Bem vindo */}
-        <Window title='Welcome' icon='windows'>
-          <p>Seja absurdamente bem vindo ao my site</p>
+        <Window title='felipe0liveira.dev' icon='id-card-o '>
+          <div className={styles.avatar}></div>
+          <p>Seja absurdamente bem vindo à essa página que eu costumo de chamar de meu sitezão <i className="fa fa-smile-o"></i></p>
           <p>
             Clica em tudo, acha uns bugs tops e o mais importante, vai lá no{' '}
             <a
@@ -24,22 +20,22 @@ const Index = () => {
             >
               Github
             </a>{' '}
-            e corrige tudo, bjs
+            e corrige tudo, bjs <i className="fa fa-heart-o"></i>
           </p>
         </Window>
 
         {/* Sobre mim */}
         <Window title='Sobre mim' icon='user'>
           <p>
-            Me chamo Felipe 0liveira, sou apaixonado por tecnologia de modo
+            Me chamo <strong>Felipe 0liveira</strong>, sou apaixonado por tecnologia de modo
             geral. Minha introdução no mundo da programação começou quando
-            percebi meu brilho nos olhos em apoiar grandes ideias, com o
+            percebi meu brilho nos olhos em <strong>apoiar grandes ideias</strong>, com o
             objetivo facilitar a vida das pessoas e das empresas.
           </p>
           <p>
-            Meu principal objetivo é prover soluções à nível do cliente,
+            Meu <strong>principal objetivo</strong> é prover soluções à nível do cliente,
             analisar suas necessidades e dores, me envolver na ideia e traçar o
-            melhor plano de ação para a execução do desenvolvimento para superar
+            melhor <strong>plano de ação</strong> para a execução do desenvolvimento para superar
             positivamente as expectativas.
           </p>
         </Window>
@@ -47,7 +43,7 @@ const Index = () => {
         {/* Skills & Tecnologias */}
         <Window title='Skills & Tecnologias' icon='code'>
           <p>
-            Tenho uma régua altíssima de qualidade, principalmente se tratando
+            Tenho uma régua altíssima de <strong>qualidade</strong>, principalmente se tratando
             de estruturação de código, organização de projetos, design patterns,
             etc.
           </p>
