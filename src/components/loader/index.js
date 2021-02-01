@@ -9,7 +9,7 @@ const Loader = () => {
             <div className='title-bar-text'>Please Wait</div>
           </div>
           <div className='window-body'>
-            <p>Loading the page fakely...</p>
+            <p>We're fakely loading this page for you.</p>
           </div>
         </div>
       </div>

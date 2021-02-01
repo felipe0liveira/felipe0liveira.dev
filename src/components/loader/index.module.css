@@ -11,6 +11,7 @@
   align-items: center;
 
   backdrop-filter: blur(15px) grayscale(100%);
+  z-index: 5;
 }
 
 .loader p {
