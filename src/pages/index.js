@@ -19,8 +19,9 @@ const Index = () => {
         >
           <div className={styles.avatar}></div>
           <p>
-            Seja absurdamente bem vindo à essa página que eu costumo de chamar
-            de meu sitezão <i className='fa fa-smile-o'></i>
+            Seja absurdamente bem vindo à essa página que eu costumo chamar de
+            meu sitezão, agora nessa v2, em Next.js{' '}
+            <i className='fa fa-smile-o'></i>
           </p>
           <p>
             Clica em tudo, acha uns bugs tops e o mais importante, vai lá no{' '}
