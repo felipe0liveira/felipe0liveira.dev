@@ -1,17 +1,27 @@
 import Window from '../components/window'
 import styles from './index.module.css'
 
-// const IndexContext = createContext();
-
 const Index = () => {
-  const deletePage = () => alert("Cê me jura memo que você clicou? :'(")
+  const deletePage = () =>
+    alert("Cê me jura memo que você clicou? :'(\nTa brincante ein!?")
+
+  const sendMessage = () =>
+    alert('Tudo bem, eu entendo...\nMas podia ter só minimizado né!?')
+
   return (
     <>
       <div className={styles.page}>
         {/* Avatar */}
-        <Window title='felipe0liveira.dev' icon='id-card-o '>
+        <Window
+          title='felipe0liveira.dev'
+          icon='id-card-o'
+          onClose={sendMessage}
+        >
           <div className={styles.avatar}></div>
-          <p>Seja absurdamente bem vindo à essa página que eu costumo de chamar de meu sitezão <i className="fa fa-smile-o"></i></p>
+          <p>
+            Seja absurdamente bem vindo à essa página que eu costumo de chamar
+            de meu sitezão <i className='fa fa-smile-o'></i>
+          </p>
           <p>
             Clica em tudo, acha uns bugs tops e o mais importante, vai lá no{' '}
             <a
@@ -20,32 +30,33 @@ const Index = () => {
             >
               Github
             </a>{' '}
-            e corrige tudo, bjs <i className="fa fa-heart-o"></i>
+            e corrige tudo, bjs <i className='fa fa-heart-o'></i>
           </p>
         </Window>
 
         {/* Sobre mim */}
         <Window title='Sobre mim' icon='user'>
           <p>
-            Me chamo <strong>Felipe 0liveira</strong>, sou apaixonado por tecnologia de modo
-            geral. Minha introdução no mundo da programação começou quando
-            percebi meu brilho nos olhos em <strong>apoiar grandes ideias</strong>, com o
-            objetivo facilitar a vida das pessoas e das empresas.
+            Me chamo <strong>Felipe 0liveira</strong>, sou apaixonado por
+            tecnologia de modo geral. Minha introdução no mundo da programação
+            começou quando percebi meu brilho nos olhos em{' '}
+            <strong>apoiar grandes ideias</strong>, com o objetivo facilitar a
+            vida das pessoas e das empresas.
           </p>
           <p>
-            Meu <strong>principal objetivo</strong> é prover soluções à nível do cliente,
-            analisar suas necessidades e dores, me envolver na ideia e traçar o
-            melhor <strong>plano de ação</strong> para a execução do desenvolvimento para superar
-            positivamente as expectativas.
+            Meu <strong>principal objetivo</strong> é prover soluções à nível do
+            cliente, analisar suas necessidades e dores, me envolver na ideia e
+            traçar o melhor <strong>plano de ação</strong> para a execução do
+            desenvolvimento para superar positivamente as expectativas.
           </p>
         </Window>
 
         {/* Skills & Tecnologias */}
         <Window title='Skills & Tecnologias' icon='code'>
           <p>
-            Tenho uma régua altíssima de <strong>qualidade</strong>, principalmente se tratando
-            de estruturação de código, organização de projetos, design patterns,
-            etc.
+            Tenho uma régua altíssima de <strong>qualidade</strong>,
+            principalmente se tratando de estruturação de código, organização de
+            projetos, design patterns, etc.
           </p>
 
           <p>

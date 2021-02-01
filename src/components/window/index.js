@@ -1,20 +1,60 @@
+import { useState } from 'react'
+
 const Window = ({ children, ...pageProps }) => {
-  const { icon, title } = pageProps
+  const { icon = '', title, onMaximize, onClose } = pageProps
+  const [windowState, setWindowState] = useState('opened')
+
+  const minimizeWindow = () => {
+    setWindowState((current) => (current = 'minimized'))
+  }
+
+  const maximizeWindow = () => {
+    setWindowState((current) => (current = 'opened'))
+  }
+
+  const closeWindow = () => {
+    onClose()
+    setWindowState((current) => (current = 'closed'))
+  }
 
   return (
-    <div className='window'>
-      <div className='title-bar'>
-        <div className='title-bar-text'>
-          <i className={`fa fa-${icon}`}></i> {title}
+    <>
+      {windowState !== 'closed' ? (
+        <div className={`window ${windowState}`}>
+          <div className='title-bar'>
+            <div className='title-bar-text'>
+              <i className={`fa fa-${icon}`}></i> {title}
+            </div>
+            <div className='title-bar-controls'>
+              {windowState == 'opened' ? (
+                <button
+                  type='button'
+                  aria-label='Minimize'
+                  onClick={minimizeWindow}
+                ></button>
+              ) : null}
+              {windowState == 'minimized' ? (
+                <button
+                  type='button'
+                  aria-label='Maximize'
+                  onClick={maximizeWindow}
+                ></button>
+              ) : null}
+              {onClose ? (
+                <button
+                  type='button'
+                  aria-label='Close'
+                  onClick={closeWindow}
+                ></button>
+              ) : null}
+            </div>
+          </div>
+          {windowState == 'opened' ? (
+            <div className='window-body'>{children}</div>
+          ) : null}
         </div>
-        <div className='title-bar-controls'>
-          <button aria-label='Minimize'></button>
-          <button aria-label='Maximize'></button>
-          <button aria-label='Close'></button>
-        </div>
-      </div>
-      <div className='window-body'>{children}</div>
-    </div>
+      ) : null}
+    </>
   )
 }
 
