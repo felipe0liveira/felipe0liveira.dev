@@ -26,6 +26,6 @@ jobs:
           WITH_V: true
 
       - name: 'Use npm-version from reedyuk'
-        uses: reedyuk/npm-version@vlatest
+        uses: reedyuk/npm-version@latest
         with:
           version: $(git describe --tags --abbrev=0 | cut -d'v' -f 2)
