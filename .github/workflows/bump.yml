@@ -20,12 +20,7 @@ jobs:
 
       - id: tagaction
         name: 'Use github-tag-action from anothrNick'
-        uses: anothrNick/github-tag-action@1.26.0
+        uses: anothrNick/github-tag-action@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
-
-      - name: 'Use npm-version from reedyuk'
-        uses: reedyuk/npm-version@latest
-        with:
-          version: $(git describe --tags --abbrev=0 | cut -d'v' -f 2)
