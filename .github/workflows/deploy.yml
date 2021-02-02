@@ -15,7 +15,7 @@ jobs:
       - name: Use NodeJs v10.x
         uses: actions/setup-node@master
         with:
-          node-version: '10.x'
+          node-version: '15.x'
 
       - name: Install project dependencies
         run: |
