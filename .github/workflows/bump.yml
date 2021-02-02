@@ -8,20 +8,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Use checkout
+        uses: actions/checkout@v2
         with:
           fetch-depth: '0'
 
-      - name: Bump Release version and push tag
+      - name: Use setup-node
+        uses: actions/setup-node@master
+        with:
+          node-version: '10.x'
+
+      - id: tagaction
+        name: Use github-tag-action
         uses: anothrNick/github-tag-action@1.26.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
 
-      - name: Use NodeJs v10.x
-        uses: actions/setup-node@master
-        with:
-          node-version: '10.x'
-
       - name: Bump NPM Project version
-        run: npm version $(git describe --tags --abbrev=0 | cut -d'v' -f 2)
+        run: npm version ${{ steps.tagaction.outputs.new_tag }}
