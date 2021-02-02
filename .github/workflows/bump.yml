@@ -13,11 +13,6 @@ jobs:
         with:
           fetch-depth: '0'
 
-      - name: 'Use setup-node from actions'
-        uses: actions/setup-node@master
-        with:
-          node-version: '15.x'
-
       - id: tagaction
         name: 'Use github-tag-action from anothrNick'
         uses: anothrNick/github-tag-action@latest
