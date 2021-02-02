@@ -24,4 +24,4 @@ jobs:
           node-version: '10.x'
 
       - name: Bump NPM Project version
-        run: npm version ${{ t }}
+        run: npm version {t}
