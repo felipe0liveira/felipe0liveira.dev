@@ -26,4 +26,4 @@ jobs:
           WITH_V: true
 
       - name: Bump NPM Project version
-        run: npm version ${{ steps.tagaction.outputs.new_tag }}
+        run: npm version ${{ steps.tagaction.outputs.tag }}
