@@ -4,30 +4,30 @@ on:
     branches:
       - main
 jobs:
-  build:
+  version_bumper:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Use checkout
+      - name: 'Use checkout from actions/checkout@v2'
         uses: actions/checkout@v2
         with:
           fetch-depth: '0'
 
-      - name: Use setup-node
+      - name: 'Use setup-node'
         uses: actions/setup-node@master
         with:
           node-version: '10.x'
 
       - id: tagaction
-        name: Use github-tag-action
+        name: 'Use github-tag-action from anothrNick/github-tag-action@1.26.0'
         uses: anothrNick/github-tag-action@1.26.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
 
-      - name: Bump NPM Project version
+      - name: 'Bump NPM Project version'
         run: |
-          npm version ${{ steps.tagaction.outputs.tag }}
           echo ${{ steps.tagaction.outputs.new_tag }}
           echo ${{ steps.tagaction.outputs.tag }}
           echo ${{ steps.tagaction.outputs.part }}
+          npm version ${{ steps.tagaction.outputs.tag }}
