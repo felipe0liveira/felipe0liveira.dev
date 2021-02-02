@@ -21,19 +21,16 @@ ul.tree-view li a {
 }
 
 /* 98.css Addons */
-.window {
-  margin-bottom: 15px;
-}
-
 .window.minimized {
   height: 20px;
 }
 
 /* Desktop Stylesheet */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   p {
     font-size: 13px;
   }
+
   .window {
     margin-bottom: 0;
   }
