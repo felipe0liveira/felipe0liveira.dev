@@ -11,6 +11,7 @@ const Index = () => {
       setLoading((current) => (current = false))
     }, 2500)
   }
+
   const deletePage = () =>
     alert("Cê me jura memo que você clicou? :'(\nTa brincante ein!?")
 
@@ -39,7 +40,7 @@ const Index = () => {
             <p>
               Clica em tudo, acha uns bugs tops e o mais importante, vai lá no{' '}
               <a
-                href='https://github.com/felipe0liveira/landing-page'
+                href='https://github.com/felipe0liveira/felipe0liveira.dev'
                 target='_blank'
               >
                 Github
