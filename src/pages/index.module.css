@@ -41,13 +41,14 @@
 
 .post {
   margin: 5px;
+  padding: 10px;
 }
 
 /* Big Desktop Stylesheet */
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 600px) {
   .page {
     display: grid;
-    grid-template-columns: 500px 300px;
+    grid-template-columns: minmax(300px, 450px) minmax(100px, 300px);
     justify-content: center;
     gap: 15px;
   }
