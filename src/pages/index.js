@@ -1,10 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import xml2json from 'xml2js'
 import Window from '../components/window'
 import Loader from '../components/loader'
 import styles from './index.module.css'
 
-const Index = () => {
+const Index = ({ posts }) => {
   const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    hideLoader()
+  }, [])
 
   const hideLoader = () => {
     setTimeout(() => {
@@ -15,10 +20,6 @@ const Index = () => {
   const deletePage = () =>
     alert("Cê me jura memo que você clicou? :'(\nTa brincante ein!?")
 
-  const sendMessage = () =>
-    alert('Tudo bem, eu entendo...\nMas podia ter só minimizado né!?')
-
-  hideLoader()
   return (
     <>
       {loading ? (
@@ -27,11 +28,7 @@ const Index = () => {
         <div className={styles.page}>
           <div className={styles.container}>
             {/* Avatar */}
-            <Window
-              title='felipe0liveira.dev'
-              icon='id-card-o'
-              onClose={sendMessage}
-            >
+            <Window title='felipe0liveira.dev' icon='id-card-o'>
               <div className={styles.avatar}></div>
               <p>
                 Seja absurdamente bem vindo à essa página que eu costumo chamar
@@ -124,7 +121,7 @@ const Index = () => {
             </Window>
 
             {/* Curiosidades */}
-            <Window title='Curiosidades' icon='cubes'>
+            <Window title='Curiosidades' icon='cubes' closable={true}>
               <p>
                 <strong>Uma linguagem</strong>
                 <br />
@@ -184,7 +181,7 @@ const Index = () => {
             </Window>
 
             {/* Donate */}
-            <Window title='Donate' icon='thumbs-o-up'>
+            <Window title='Donate' icon='thumbs-o-up' closable={true}>
               <p>
                 Qualquer donate, independente de valor, é extremamente válido e
                 muito bem recebido <i className='fa fa-heart'></i>
@@ -211,18 +208,51 @@ const Index = () => {
                 </p>
               </div>
             </Window>
-
-            <section>
-              <hr className='mobile' />
-              <button type='button' onClick={deletePage}>
-                dev purposes: delete page
-              </button>
-            </section>
           </div>
+
+          {/* Feed */}
+          <div className={styles.rss}>
+            <Window title='Feed' icon='rss'>
+              {posts.map((post) => (
+                <a href={post.link} target='_blank' key={post.id}>
+                  <button type='button' className={styles.post}>
+                    {post.title}
+                  </button>
+                </a>
+              ))}
+            </Window>
+          </div>
+
+          {/* Easter Egg */}
+          <section>
+            <hr className='mobile' />
+            <button type='button' onClick={deletePage}>
+              dev purposes: delete page
+            </button>
+          </section>
         </div>
       )}
     </>
   )
+}
+
+Index.getInitialProps = async () => {
+  const response = await fetch('https://dev.to/feed/felipe0liveira.dev')
+  const xml = await response.text()
+  const rss = await xml2json.parseStringPromise(xml)
+  let posts = rss['rss']['channel'][0]['item']
+
+  posts = posts.map((item, index) => ({
+    id: index,
+    title: item.title[0],
+    author: item.author[0],
+    pubDate: item.pubDate[0],
+    link: item.link[0],
+    description: item.description[0],
+    category: item.category,
+  }))
+
+  return { posts }
 }
 
 export default Index
