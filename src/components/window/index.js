@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const Window = ({ children, ...pageProps }) => {
-  const { icon = '', title, onMaximize, onClose } = pageProps
+  const { icon = '', title, closable } = pageProps
   const [windowState, setWindowState] = useState('opened')
 
   const minimizeWindow = () => {
@@ -13,8 +13,9 @@ const Window = ({ children, ...pageProps }) => {
   }
 
   const closeWindow = () => {
-    onClose()
-    setWindowState((current) => (current = 'closed'))
+    if (confirm(`Deseja realmente fechar a janela '${title}'?`)) {
+      setWindowState((current) => (current = 'closed'))
+    }
   }
 
   return (
@@ -40,7 +41,7 @@ const Window = ({ children, ...pageProps }) => {
                   onClick={maximizeWindow}
                 ></button>
               ) : null}
-              {onClose ? (
+              {closable ? (
                 <button
                   type='button'
                   aria-label='Close'
