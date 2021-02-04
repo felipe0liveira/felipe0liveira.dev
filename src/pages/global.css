@@ -25,14 +25,15 @@ ul.tree-view li a {
   height: 20px;
 }
 
+.window {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
 /* Desktop Stylesheet */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 870px) {
   p {
     font-size: 13px;
-  }
-
-  .window {
-    margin-bottom: 0;
   }
 
   section {
