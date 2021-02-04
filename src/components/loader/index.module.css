@@ -1,19 +1,22 @@
 .loader {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
 
-  width: 100%;
+  transform: translate(-50%, -50%);
+
+  width: 300px;
   height: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  backdrop-filter: blur(15px) grayscale(100%);
-  z-index: 5;
 }
 
 .loader p {
-  margin: 0 40px;
+  margin: 10px;
+}
+
+.loader .window {
+  width: 300px !important;
 }
