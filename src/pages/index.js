@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import xml2json from 'xml2js'
+import FeedService from '../services/feed.service'
 import Loader from '../components/loader'
 import Feed from '../components/feed'
 import Donate from '../components/donate'
@@ -58,22 +58,8 @@ const Index = ({ feed }) => {
 }
 
 Index.getInitialProps = async () => {
-  const response = await fetch('https://dev.to/feed/felipe0liveira.dev')
-  const xml = await response.text()
-  const rss = await xml2json.parseStringPromise(xml)
-  let postsDevTo = rss['rss']['channel'][0]['item']
-
-  postsDevTo = postsDevTo.map((item, index) => ({
-    id: index,
-    title: item.title[0],
-    author: item.author[0],
-    pubDate: item.pubDate[0],
-    link: item.link[0],
-    description: item.description[0],
-    category: item.category,
-  }))
-
-  return { feed: postsDevTo }
+  const feed = await FeedService.getFeed()
+  return { feed }
 }
 
 export default Index
