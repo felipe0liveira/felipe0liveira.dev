@@ -1,6 +1,10 @@
 import Window from '../window'
 import styles from './index.module.css'
 
+const openPost = ({ url }) => {
+  window.open(url, '_blank')
+}
+
 const Feed = ({ feed }) => {
   return (
     <>
@@ -14,11 +18,14 @@ const Feed = ({ feed }) => {
           </>
         )}
         {feed.map((post) => (
-          <a href={post.link} target='_blank' key={post.id}>
-            <button type='button' className={styles.post}>
-              {post.title}
-            </button>
-          </a>
+          <button
+            type='button'
+            className={styles.post}
+            onClick={() => openPost(post)}
+            key={post.id}
+          >
+            {post.title}
+          </button>
         ))}
       </Window>
     </>
