@@ -8,7 +8,21 @@ const openRepository = ({ url }) => {
 const GitRepositories = ({ repos }) => {
   return (
     <>
-      <Window title='Repositórios' icon='github' cssClass='limited-height'>
+      <Window
+        title='Repositórios'
+        icon='github'
+        cssClass={repos.length > 0 && 'limited-height'}
+        closable={true}
+      >
+        {repos.length === 0 && (
+          <>
+            <p>
+              No momento não é possível carregar a lista de repositórios do
+              Github, vai atualizando a página aí até funcionar, valeu obrigado,
+              de nada!
+            </p>
+          </>
+        )}
         {repos.map((repo) => (
           <button
             type='button'
