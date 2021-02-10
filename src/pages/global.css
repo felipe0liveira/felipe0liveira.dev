@@ -32,7 +32,7 @@ ul.tree-view li a {
 
 .window.limited-height .window-body {
   margin: 0;
-  max-height: 500px;
+  max-height: 300px;
   overflow-y: auto;
 }
 
