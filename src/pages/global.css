@@ -30,6 +30,12 @@ ul.tree-view li a {
   width: 100%;
 }
 
+.window.limited-height .window-body {
+  margin: 0;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
 /* Desktop Stylesheet */
 @media screen and (min-width: 870px) {
   p {

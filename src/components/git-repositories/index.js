@@ -8,7 +8,7 @@ const openRepository = ({ url }) => {
 const GitRepositories = ({ repos }) => {
   return (
     <>
-      <Window title='Repositórios' icon='github'>
+      <Window title='Repositórios' icon='github' cssClass='limited-height'>
         {repos.map((repo) => (
           <button
             type='button'
