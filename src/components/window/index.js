@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const Window = ({ children, ...pageProps }) => {
-  const { icon = '', title, closable } = pageProps
+  const { icon = '', title, closable, cssClass } = pageProps
   const [windowState, setWindowState] = useState('opened')
 
   const minimizeWindow = () => {
@@ -21,7 +21,7 @@ const Window = ({ children, ...pageProps }) => {
   return (
     <>
       {windowState !== 'closed' ? (
-        <div className={`window ${windowState}`}>
+        <div className={`window ${windowState} ${cssClass}`}>
           <div className='title-bar'>
             <div className='title-bar-text'>
               <i className={`fa fa-${icon}`}></i> {title}
