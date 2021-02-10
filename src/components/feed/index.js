@@ -5,6 +5,14 @@ const Feed = ({ feed }) => {
   return (
     <>
       <Window title='Feed' icon='rss'>
+        {feed.length === 0 && (
+          <>
+            <p>
+              No momento não é possível carregar o feed, vai atualizando a
+              página aí até funcionar, valeu obrigado, de nada!
+            </p>
+          </>
+        )}
         {feed.map((post) => (
           <a href={post.link} target='_blank' key={post.id}>
             <button type='button' className={styles.post}>
