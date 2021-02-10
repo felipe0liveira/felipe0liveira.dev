@@ -12,9 +12,11 @@
 @media screen and (min-width: 600px) {
   .page {
     display: grid;
-    grid-template-columns: minmax(300px, 450px) minmax(100px, 300px);
     align-items: flex-start;
     justify-content: center;
+    grid-template-columns:
+      minmax(300px, 500px)
+      minmax(100px, 300px);
     gap: 15px;
   }
 }
