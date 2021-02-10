@@ -1,0 +1,14 @@
+.QRCode {
+  color: #333;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.QRCode p {
+  margin: 0;
+}
+
+.QRCode img {
+  width: 60%;
+  mix-blend-mode: darken;
+}
