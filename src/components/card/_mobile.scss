@@ -1,0 +1,22 @@
+@import './_desktop';
+
+.card {
+  padding: 15px 10px;
+
+  background: #ffffff09;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  &.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  transition: ease 0.2s;
+  &:active {
+    background: #ffffff00;
+    color: #4e4e4e;
+  }
+}
