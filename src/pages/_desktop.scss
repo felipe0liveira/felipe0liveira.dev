@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px) {
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #303135;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff3f;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff57;
+  }
+
+  .page {
+    main {
+      margin: 0 20%;
+    }
+  }
+}

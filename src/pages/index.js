@@ -1,66 +1,149 @@
-import { useEffect, useState } from 'react'
-import styles from './index.module.css'
+import Avatar from '../components/avatar'
+import Card from '../components/card'
+import Carousel from '../components/carousel'
 
-// Services
 import FeedService from '../services/feed.service'
 import GithubService from '../services/github.service'
 
-// Components
-import Loader from '../components/loader'
-import Feed from '../components/feed'
-import Donate from '../components/donate'
-import Avatar from '../components/avatar'
-import AboutMe from '../components/about-me'
-import Skills from '../components/skills'
-import Curiosities from '../components/curiosities'
-import Social from '../components/social'
-import GitRepositories from '../components/git-repositories'
+import './_mobile.scss'
 
 const Index = ({ feed, repositories }) => {
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    hideLoader()
-  }, [])
-
-  const hideLoader = () => {
-    setTimeout(() => {
-      setLoading((current) => (current = false))
-    }, 2500)
-  }
-
-  const deletePage = () =>
-    alert("Cê me jura memo que você clicou? :'(\nTa brincante ein!?")
-
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className={styles.page}>
-          <div className={styles.container}>
-            <Avatar />
-            <AboutMe />
-            <Skills />
-            <Curiosities />
-            <Social />
-            <Donate />
-          </div>
+      <div className='page'>
+        <header>
+          <Avatar />
+          <h1 className='title'>Felipe 0liveira</h1>
+          <span>Software Enginieer</span>
+        </header>
 
-          <div className={styles.sideContainer}>
-            <Feed feed={feed} />
-            <GitRepositories repos={repositories} />
-          </div>
+        <main>
+          <Card>
+            <p>
+              Seja absurdamente bem vindo à essa página que eu costumo chamar de
+              meu sitezão, agora nessa v3, com um novo visual.
+            </p>
+            <br />
+            <p>
+              Clica em tudo, acha uns bugs tops e o mais importante, vai lá no{' '}
+              <a
+                href='https://github.com/felipe0liveira/felipe0liveira.dev'
+                target='_blank'
+              >
+                Github
+              </a>{' '}
+              e corrige tudo, bjs.
+            </p>
+          </Card>
 
-          {/* Easter Egg */}
-          <section>
-            <hr className='mobile' />
-            <button type='button' onClick={deletePage}>
-              dev purposes: delete page
-            </button>
-          </section>
-        </div>
-      )}
+          <Card title='Sobre mim'>
+            <p>
+              Me chamo Felipe 0liveira, sou apaixonado por tecnologia de modo
+              geral. Minha introdução no mundo da programação começou quando
+              percebi meu brilho nos olhos em apoiar grandes ideias, com o
+              objetivo facilitar a vida das pessoas e das empresas.
+            </p>
+            <br />
+            <p>
+              Meu principal objetivo é prover soluções à nível do cliente,
+              analisar suas necessidades e dores, me envolver na ideia e traçar
+              o melhor plano de ação para a execução do desenvolvimento para
+              superar positivamente as expectativas.
+            </p>
+          </Card>
+
+          <Carousel title='Repositórios no Github'>
+            {repositories.map((repo) => (
+              <Card url={repo.url} center={true} key={repo.id}>
+                <p>
+                  {repo.name}
+                  <br />
+                  <small>{repo.description}</small>
+                </p>
+              </Card>
+            ))}
+          </Carousel>
+
+          <Card title='Skills'>
+            <p>
+              Tenho uma régua altíssima de qualidade, principalmente se tratando
+              de estruturação de código, organização de projetos, design
+              patterns, etc.
+            </p>
+            <br />
+            <p>
+              Me destaco tanto na comunicação assertiva com as pessoas, prezando
+              objetividade e clareza, quanto por minha rápida e eficiente curva
+              de aprendizado, entregando máxima performance dentro da
+              expectativa de prazo. Algumas coisinhas que me brilham os olhos...
+            </p>
+          </Card>
+
+          <Carousel title='Curiosidades'>
+            <Card title='Uma linguagem'>
+              <p>Sem dúvidas é o Javascript, para os mais íntimos, js</p>
+            </Card>
+            <Card title='Um segredo'>
+              <p>
+                Eu confesso! Da meia noite às seis eu faço bots de Web Scrapping
+              </p>
+            </Card>
+            <Card title='Uma paixão'>
+              <p>Sou cantor, tocadô de vioão e fotógrafo nas horas vagas</p>
+            </Card>
+          </Carousel>
+
+          <Card title='Social'>
+            <ul>
+              <li>
+                <a href='https://dev.to/felipe0liveira' target='_blank'>
+                  Dev.to
+                </a>{' '}
+                para ver posts sobre desenvolvimento e tecnologia
+              </li>
+              <li>
+                <a href='https://codepen.io/felipe0liveira' target='_blank'>
+                  Codepen
+                </a>{' '}
+                para ver snippets de código.
+              </li>
+              <li>
+                <a
+                  href='https://linkedin.com/in/felipe0liveira'
+                  target='_blank'
+                >
+                  Linkedin
+                </a>{' '}
+                para ver meu perfil profissional.
+              </li>
+              <li>
+                <a href='https://github.com/felipe0liveira' target='_blank'>
+                  Github
+                </a>{' '}
+                para resolver os bugs do meu site.
+              </li>
+              <li>
+                <a href='https://twitter.com/felpd3v' target='_blank'>
+                  Twitter
+                </a>{' '}
+                para dar rt em coisas sem sentido.
+              </li>
+            </ul>
+          </Card>
+
+          <Carousel title='Publicações no DEV.TO'>
+            {feed.map((post) => (
+              <Card url={post.url} center={true} key={post.id}>
+                <p>
+                  {post.title}
+                  <br />
+                  <small>{post.category.join(', ')}</small>
+                </p>
+              </Card>
+            ))}
+          </Carousel>
+        </main>
+      </div>
     </>
   )
 }
