@@ -15,7 +15,7 @@ const Card = ({ children, ...pageProps }) => {
         className={`card ${center && 'center'} ${url && 'clickable'}`}
         onClick={() => goTo(url)}
       >
-        {image && <img src={image} alt={title} />}
+        {image && <img className='headerImage' src={image} alt={title} />}
         {title && <h2 className='title'>{title}</h2>}
 
         {children}
