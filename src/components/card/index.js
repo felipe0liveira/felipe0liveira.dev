@@ -1,7 +1,7 @@
 import './_mobile.scss'
 
 const Card = ({ children, ...pageProps }) => {
-  const { title, url, center } = pageProps
+  const { title, url, center, image } = pageProps
 
   const goTo = (url) => {
     if (url) {
@@ -15,7 +15,9 @@ const Card = ({ children, ...pageProps }) => {
         className={`card ${center && 'center'} ${url && 'clickable'}`}
         onClick={() => goTo(url)}
       >
+        {image && <img src={image} alt={title} />}
         {title && <h2 className='title'>{title}</h2>}
+
         {children}
       </div>
     </>
