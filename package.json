@@ -24,9 +24,7 @@
   },
   "homepage": "https://github.com/felipe0liveira/landing-page#readme",
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
-    "98.css": "^0.1.16",
     "font-awesome": "^4.7.0",
     "next": "^10.0.5",
     "react": "^17.0.1",
