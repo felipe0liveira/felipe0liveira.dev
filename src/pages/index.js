@@ -148,6 +148,26 @@ const Index = ({ feed, repositories }) => {
               </Card>
             ))}
           </Carousel>
+
+          <Card title='Donate'>
+            <p>
+              Qualquer donate, independente de valor, é extremamente válido e
+              muito bem recebido
+              <br />
+              Para fazer um donate, atualmente é possível somente utilizando o
+              PIX, via QRCode
+            </p>
+
+            <div className='qr-code'>
+              <img src='/images/qr_donate.jpg' alt='QR Code Pix Donate' />
+            </div>
+
+            <p className='pix-key'>
+              CHAVE PIX
+              <br />
+              78b5b317-1d82-4b3f-82cb-e04d1b3b7329
+            </p>
+          </Card>
         </main>
       </div>
     </>

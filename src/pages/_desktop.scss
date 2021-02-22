@@ -20,6 +20,15 @@
   .page {
     main {
       margin: 0 20%;
+      .qr-code {
+        text-align: left;
+        img {
+          width: 250px;
+        }
+      }
+      .pix-key {
+        text-align: left;
+      }
     }
   }
 }
