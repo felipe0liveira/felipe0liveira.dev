@@ -14,7 +14,7 @@ const Index = ({ feed, repositories }) => {
         <header>
           <Avatar />
           <h1 className='title'>Felipe 0liveira</h1>
-          <span>Software Enginieer</span>
+          <span>Software Engineer</span>
         </header>
 
         <main>
@@ -36,7 +36,10 @@ const Index = ({ feed, repositories }) => {
             </p>
           </Card>
 
-          <Card title='Sobre mim'>
+          <Card
+            title='Sobre mim'
+            image='https://media.giphy.com/media/3oriNKgISzB8diFeFy/giphy.gif'
+          >
             <p>
               Me chamo Felipe 0liveira, sou apaixonado por tecnologia de modo
               geral. Minha introdução no mundo da programação começou quando
@@ -64,7 +67,10 @@ const Index = ({ feed, repositories }) => {
             ))}
           </Carousel>
 
-          <Card title='Skills'>
+          <Card
+            title='Skills'
+            image='https://media.giphy.com/media/rvjIGIOI9lhsc/giphy.gif'
+          >
             <p>
               Tenho uma régua altíssima de qualidade, principalmente se tratando
               de estruturação de código, organização de projetos, design
@@ -75,7 +81,7 @@ const Index = ({ feed, repositories }) => {
               Me destaco tanto na comunicação assertiva com as pessoas, prezando
               objetividade e clareza, quanto por minha rápida e eficiente curva
               de aprendizado, entregando máxima performance dentro da
-              expectativa de prazo. Algumas coisinhas que me brilham os olhos...
+              expectativa de prazo.
             </p>
           </Card>
 
