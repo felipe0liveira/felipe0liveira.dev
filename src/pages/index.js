@@ -9,10 +9,13 @@ import GithubService from '../services/github.service'
 import './_mobile.scss'
 
 const Index = ({ feed, repositories }) => {
-  const [clipboardStatus, setClipboardStatus] = useState(false)
+  const [state, setState] = useState({ clipboardStatus: false })
 
   useEffect(() => {
-    setClipboardStatus(navigator.clipboard && true)
+    setState({
+      ...state,
+      clipboardStatus: navigator.clipboard && true,
+    })
   }, [])
 
   const copyToClipboard = async (data) => {
@@ -176,7 +179,7 @@ const Index = ({ feed, repositories }) => {
             <p className='pix-key'>
               CHAVE PIX
               <br />
-              {clipboardStatus ? (
+              {state.clipboardStatus ? (
                 <a
                   onClick={() =>
                     copyToClipboard('78b5b317-1d82-4b3f-82cb-e04d1b3b7329')
