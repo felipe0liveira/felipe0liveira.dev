@@ -20,14 +20,20 @@
   .page {
     main {
       margin: 0 20%;
+
       .qr-code {
-        text-align: left;
+        display: flex;
+        flex-direction: row;
+
         img {
           width: 250px;
+
+          margin-right: 15px;
+          margin-bottom: 0;
         }
-      }
-      .pix-key {
-        text-align: left;
+        .pix-key {
+          color: #868686;
+        }
       }
     }
   }

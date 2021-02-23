@@ -23,6 +23,7 @@ body {
   a:hover {
     color: #fafafa;
     text-decoration: underline;
+    cursor: pointer;
   }
 
   ul {
@@ -80,17 +81,19 @@ body {
     padding: 15px;
 
     .qr-code {
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      margin: 15px 0;
-      text-align: center;
+
       img {
-        width: 90%;
+        margin-bottom: 15px;
+        width: calc(100% - 10px);
         border: 5px solid #ffffff;
       }
-    }
-    .pix-key {
-      text-align: center;
-      color: #868686;
+
+      .pix-key {
+        color: #868686;
+      }
     }
   }
 }
