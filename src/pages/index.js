@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Avatar from '../components/avatar'
 import Card from '../components/card'
 import Carousel from '../components/carousel'
@@ -8,6 +9,16 @@ import GithubService from '../services/github.service'
 import './_mobile.scss'
 
 const Index = ({ feed, repositories }) => {
+  const [clipboardStatus, setClipboardStatus] = useState(false)
+
+  useEffect(() => {
+    setClipboardStatus(navigator.clipboard && true)
+  }, [])
+
+  const copyToClipboard = async (data) => {
+    await navigator.clipboard.writeText(data)
+  }
+
   return (
     <>
       <div className='page'>
@@ -165,7 +176,19 @@ const Index = ({ feed, repositories }) => {
             <p className='pix-key'>
               CHAVE PIX
               <br />
-              78b5b317-1d82-4b3f-82cb-e04d1b3b7329
+              {clipboardStatus ? (
+                <a
+                  onClick={() =>
+                    copyToClipboard('78b5b317-1d82-4b3f-82cb-e04d1b3b7329')
+                  }
+                >
+                  78b5b317-1d82-4b3f-82cb-e04d1b3b7329
+                  <br />
+                  COPIAR
+                </a>
+              ) : (
+                '78b5b317-1d82-4b3f-82cb-e04d1b3b7329'
+              )}
             </p>
           </Card>
         </main>
