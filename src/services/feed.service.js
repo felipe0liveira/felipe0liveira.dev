@@ -4,6 +4,10 @@ const getFeed = async () => {
   const response = await fetch('https://dev.to/feed/felipe0liveira.dev')
   const xml = await response.text()
   const rss = await xml2json.parseStringPromise(xml)
+  if (rss.errors) {
+    return []
+  }
+
   let postsDevTo = rss['rss']['channel'][0]['item']
 
   postsDevTo = postsDevTo.map((item, index) => ({
