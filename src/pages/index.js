@@ -18,6 +18,8 @@ const Index = ({ feed, repositories }) => {
     })
   }, [])
 
+  const PIXKey = 'ba0112b6-a17e-45d2-97e2-e48f80275f09'
+
   const copyToClipboard = async (data) => {
     await navigator.clipboard.writeText(data)
   }
@@ -150,40 +152,40 @@ const Index = ({ feed, repositories }) => {
               </li>
             </ul>
           </Card>
-
-          <Carousel title='Publicações no DEV.TO'>
-            {feed.map((post) => (
-              <Card url={post.url} center={true} key={post.id}>
-                <p>
-                  {post.title}
-                  <br />
-                  <small>{post.category.join(', ')}</small>
-                </p>
-              </Card>
-            ))}
-          </Carousel>
+          {feed.length > 0 && (
+            <Carousel title='Publicações no DEV.TO'>
+              {feed.map((post) => (
+                <Card url={post.url} center={true} key={post.id}>
+                  <p>
+                    {post.title}
+                    <br />
+                    <small>{post.category.join(', ')}</small>
+                  </p>
+                </Card>
+              ))}
+            </Carousel>
+          )}
 
           <Card title='Donate'>
             <div className='qr-code'>
-              <img src='/images/qr_donate.jpg' alt='QR Code Pix Donate' />
+              <a
+                href='https://nubank.com.br/pagar/2iqkc/cE4AQZNbKa'
+                target='_blank'
+              >
+                <img src='/images/qr_donate.jpg' alt='QR Code Pix Donate' />
+              </a>
 
               <p>
                 Qualquer donate, independente de valor, é extremamente válido e
                 muito bem recebido.
                 <br />
-                Para fazer um donate, atualmente é possível utilizando o
-                PIX, via QRCode ou
+                Para fazer um donate, atualmente é possível utilizando o PIX,
+                via QRCode ou
                 <br />
-                CHAVE PIX: <strong>78b5b317-1d82-4b3f-82cb-e04d1b3b7329</strong>
+                CHAVE PIX: <strong>PIXKey</strong>
                 {' - '}
                 {state.clipboardStatus && (
-                  <a
-                    onClick={() =>
-                      copyToClipboard('78b5b317-1d82-4b3f-82cb-e04d1b3b7329')
-                    }
-                  >
-                    COPIAR
-                  </a>
+                  <a onClick={() => copyToClipboard('PIXKey')}>COPIAR</a>
                 )}
               </p>
             </div>
