@@ -182,10 +182,10 @@ const Index = ({ feed, repositories }) => {
                 Para fazer um donate, atualmente é possível utilizando o PIX,
                 via QRCode ou
                 <br />
-                CHAVE PIX: <strong>PIXKey</strong>
+                CHAVE PIX: <strong>{PIXKey}</strong>
                 {' - '}
                 {state.clipboardStatus && (
-                  <a onClick={() => copyToClipboard('PIXKey')}>COPIAR</a>
+                  <a onClick={() => copyToClipboard(PIXKey)}>COPIAR</a>
                 )}
               </p>
             </div>
