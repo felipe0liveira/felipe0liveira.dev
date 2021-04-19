@@ -159,7 +159,7 @@ const Index = ({ feed, repositories }) => {
                   <p>
                     {post.title}
                     <br />
-                    <small>{post.category.join(', ')}</small>
+                    <small>{post.category}</small>
                   </p>
                 </Card>
               ))}

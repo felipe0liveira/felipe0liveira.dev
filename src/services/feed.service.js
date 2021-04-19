@@ -1,20 +1,15 @@
-import xml2json from 'xml2js'
-
 const getFeed = async () => {
-  const response = await fetch('https://dev.to/feed/felipe0liveira.dev')
-  const xml = await response.text()
-  const rss = await xml2json.parseStringPromise(xml)
-  if (rss.errors) {
-    return []
-  }
+  const request = await fetch(
+    'https://dev.to/api/articles?username=felipe0liveira'
+  )
+  const response = await request.json()
 
-  let postsDevTo = rss['rss']['channel'][0]['item']
-
-  postsDevTo = postsDevTo.map((item, index) => ({
-    id: index,
-    title: item.title[0],
-    url: item.link[0],
-    category: item.category,
+  const postsDevTo = response.map((item) => ({
+    id: item.id,
+    title: item.title,
+    url: item.url,
+    category: item.tags,
+    image: item.cover_image,
   }))
 
   return postsDevTo
