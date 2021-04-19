@@ -11,7 +11,6 @@ Sintam-se à vontade para explorar <3
 ### Principais bibliotecas
 
 - `nextjs` - O motor da aplicação
-- `98.css` - Para dar toda essa cara de Windows 98
 - `font-awesome` - Iconografia da aplicação
 - `prettier` - Formatação do código
 - `react-gtm-module` - Facilitar a conexão com o Google Tag Manager
