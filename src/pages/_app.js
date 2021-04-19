@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import TagManager from 'react-gtm-module'
-
-// CSS Libs
+import { hotjar } from 'react-hotjar'
 import { useEffect } from 'react'
 
 const App = ({ Component, pageProps }) => {
@@ -11,6 +10,7 @@ const App = ({ Component, pageProps }) => {
       gtmId: 'GTM-5XCHHG7',
     }
     TagManager.initialize(tagManagerArgs)
+    hotjar.initialize(2358107, 6)
   })
 
   return (
