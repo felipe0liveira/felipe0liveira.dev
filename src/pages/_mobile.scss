@@ -79,6 +79,11 @@ body {
     gap: 15px;
 
     padding: 15px;
+    
+    .blog {
+      display: grid;
+      gap: 15px;
+    }
 
     .qr-code {
       display: flex;

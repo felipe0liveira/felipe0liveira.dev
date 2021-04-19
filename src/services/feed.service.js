@@ -7,6 +7,7 @@ const getFeed = async () => {
   const postsDevTo = response.map((item) => ({
     id: item.id,
     title: item.title,
+    description: item.description,
     url: item.url,
     category: item.tags,
     image: item.cover_image,

@@ -21,6 +21,10 @@
     main {
       margin: 0 20%;
 
+      .blog {
+        grid-template-columns: 50% 50%;
+      }
+
       .qr-code {
         display: flex;
         flex-direction: row;

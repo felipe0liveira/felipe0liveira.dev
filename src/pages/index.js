@@ -39,7 +39,6 @@ const Index = ({ feed, repositories }) => {
               Seja absurdamente bem vindo à essa página que eu costumo chamar de
               meu sitezão, agora nessa v3, com um novo visual.
             </p>
-            <br />
             <p>
               Clica em tudo, acha uns bugs tops e o mais importante, vai lá no{' '}
               <a
@@ -48,7 +47,7 @@ const Index = ({ feed, repositories }) => {
               >
                 Github
               </a>{' '}
-              e corrige tudo, bjs.
+              e corrige, bjs.
             </p>
           </Card>
 
@@ -70,6 +69,25 @@ const Index = ({ feed, repositories }) => {
               superar positivamente as expectativas.
             </p>
           </Card>
+
+          {feed.length > 0 && (
+            <div className='blog'>
+              {feed.map((post) => (
+                <Card
+                  title={post.title}
+                  url={post.url}
+                  image={post.image}
+                  key={post.id}
+                >
+                  <p>
+                    {post.description}
+                    <br />
+                    <small>{post.category}</small>
+                  </p>
+                </Card>
+              ))}
+            </div>
+          )}
 
           <Carousel title='Repositórios no Github'>
             {repositories.map((repo) => (
@@ -152,19 +170,6 @@ const Index = ({ feed, repositories }) => {
               </li>
             </ul>
           </Card>
-          {feed.length > 0 && (
-            <Carousel title='Publicações no DEV.TO'>
-              {feed.map((post) => (
-                <Card url={post.url} center={true} key={post.id}>
-                  <p>
-                    {post.title}
-                    <br />
-                    <small>{post.category}</small>
-                  </p>
-                </Card>
-              ))}
-            </Carousel>
-          )}
 
           <Card title='Donate'>
             <div className='qr-code'>
