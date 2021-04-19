@@ -1,4 +1,4 @@
-import './_mobile.scss'
+import './styles.scss'
 
 const Card = ({ children, ...pageProps }) => {
   const { title, url, center, image } = pageProps

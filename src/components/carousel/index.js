@@ -1,4 +1,4 @@
-import './_mobile.scss'
+import './styles.scss'
 
 const Carousel = ({ children, ...pageProps }) => {
   const { title } = pageProps

@@ -6,7 +6,7 @@ import Carousel from '../components/carousel'
 import FeedService from '../services/feed.service'
 import GithubService from '../services/github.service'
 
-import './_mobile.scss'
+import './styles.scss'
 
 const Index = ({ feed, repositories }) => {
   const [state, setState] = useState({ clipboardStatus: false })
