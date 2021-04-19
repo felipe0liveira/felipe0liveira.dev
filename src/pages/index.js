@@ -25,14 +25,14 @@ const Index = ({ feed, repositories }) => {
   }
 
   return (
-    <>
-      <div className='page'>
-        <header>
-          <Avatar />
-          <h1 className='title'>Felipe 0liveira</h1>
-          <span>Software Engineer</span>
-        </header>
+    <div className='page'>
+      <header>
+        <Avatar />
+        <h1 className='title'>Felipe 0liveira</h1>
+        <span>Software Engineer</span>
+      </header>
 
+      <div className='content'>
         <main>
           <Card>
             <p>
@@ -69,25 +69,6 @@ const Index = ({ feed, repositories }) => {
               superar positivamente as expectativas.
             </p>
           </Card>
-
-          {feed.length > 0 && (
-            <div className='blog'>
-              {feed.map((post) => (
-                <Card
-                  title={post.title}
-                  url={post.url}
-                  image={post.image}
-                  key={post.id}
-                >
-                  <p>
-                    {post.description}
-                    <br />
-                    <small>{post.category}</small>
-                  </p>
-                </Card>
-              ))}
-            </div>
-          )}
 
           <Carousel title='Repositórios no Github'>
             {repositories.map((repo) => (
@@ -196,8 +177,29 @@ const Index = ({ feed, repositories }) => {
             </div>
           </Card>
         </main>
+
+        <section>
+          {feed.length > 0 && (
+            <div className='blog'>
+              {feed.map((post) => (
+                <Card
+                  title={post.title}
+                  url={post.url}
+                  image={post.image}
+                  key={post.id}
+                >
+                  <p>
+                    {post.description}
+                    <br />
+                    <small>{post.category}</small>
+                  </p>
+                </Card>
+              ))}
+            </div>
+          )}
+        </section>
       </div>
-    </>
+    </div>
   )
 }
 

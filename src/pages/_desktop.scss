@@ -18,26 +18,32 @@
   }
 
   .page {
-    main {
-      margin: 0 20%;
+    .content {
+      display: grid;
+      grid-template-columns: minmax(480px, 850px) 270px;
+      justify-content: center;
 
-      .blog {
-        grid-template-columns: 50% 50%;
+      main {
+        grid-auto-rows: min-content;
+
+        .qr-code {
+          display: flex;
+          flex-direction: row;
+
+          img {
+            width: 250px;
+
+            margin-right: 15px;
+            margin-bottom: 0;
+          }
+          .pix-key {
+            color: #868686;
+          }
+        }
       }
 
-      .qr-code {
-        display: flex;
-        flex-direction: row;
-
-        img {
-          width: 250px;
-
-          margin-right: 15px;
-          margin-bottom: 0;
-        }
-        .pix-key {
-          color: #868686;
-        }
+      .blog {
+        padding: 15px 15px 15px 0;
       }
     }
   }

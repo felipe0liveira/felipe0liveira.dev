@@ -73,32 +73,36 @@ body {
     }
   }
 
-  main {
-    display: grid;
-    grid-template-columns: 100%;
-    gap: 15px;
+  .content {
+    main {
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 15px;
 
-    padding: 15px;
-    
+      padding: 15px;
+
+      .qr-code {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        img {
+          margin-bottom: 15px;
+          width: calc(100% - 10px);
+          border: 5px solid #ffffff;
+        }
+
+        .pix-key {
+          color: #868686;
+        }
+      }
+    }
+
     .blog {
       display: grid;
       gap: 15px;
-    }
 
-    .qr-code {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-
-      img {
-        margin-bottom: 15px;
-        width: calc(100% - 10px);
-        border: 5px solid #ffffff;
-      }
-
-      .pix-key {
-        color: #868686;
-      }
+      padding: 0 15px 15px 15px;
     }
   }
 }
