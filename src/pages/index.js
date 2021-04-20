@@ -44,6 +44,7 @@ const Index = ({ feed, repositories }) => {
               <a
                 href='https://github.com/felipe0liveira/felipe0liveira.dev'
                 target='_blank'
+                data-gtm='link-github-collaborate'
               >
                 Github
               </a>{' '}
@@ -72,7 +73,12 @@ const Index = ({ feed, repositories }) => {
 
           <Carousel title='Repositórios no Github'>
             {repositories.map((repo) => (
-              <Card url={repo.url} center={true} key={repo.id}>
+              <Card
+                url={repo.url}
+                center={true}
+                key={repo.id}
+                data-gtm={`link-github-${repo.name}`}
+              >
                 <p>
                   {repo.name}
                   <br />
@@ -117,13 +123,21 @@ const Index = ({ feed, repositories }) => {
           <Card title='Social'>
             <ul>
               <li>
-                <a href='https://dev.to/felipe0liveira' target='_blank'>
+                <a
+                  href='https://dev.to/felipe0liveira'
+                  target='_blank'
+                  data-gtm='social-devto'
+                >
                   Dev.to
                 </a>{' '}
                 para ver posts sobre desenvolvimento e tecnologia
               </li>
               <li>
-                <a href='https://codepen.io/felipe0liveira' target='_blank'>
+                <a
+                  href='https://codepen.io/felipe0liveira'
+                  target='_blank'
+                  data-gtm='social-codepen'
+                >
                   Codepen
                 </a>{' '}
                 para ver snippets de código.
@@ -132,19 +146,28 @@ const Index = ({ feed, repositories }) => {
                 <a
                   href='https://linkedin.com/in/felipe0liveira'
                   target='_blank'
+                  data-gtm='social-linkedin'
                 >
                   Linkedin
                 </a>{' '}
                 para ver meu perfil profissional.
               </li>
               <li>
-                <a href='https://github.com/felipe0liveira' target='_blank'>
+                <a
+                  href='https://github.com/felipe0liveira'
+                  target='_blank'
+                  data-gtm='social-github'
+                >
                   Github
                 </a>{' '}
                 para resolver os bugs do meu site.
               </li>
               <li>
-                <a href='https://twitter.com/felpd3v' target='_blank'>
+                <a
+                  href='https://twitter.com/felpd3v'
+                  target='_blank'
+                  data-gtm='social-twitter'
+                >
                   Twitter
                 </a>{' '}
                 para dar rt em coisas sem sentido.
@@ -158,7 +181,11 @@ const Index = ({ feed, repositories }) => {
                 href='https://nubank.com.br/pagar/2iqkc/cE4AQZNbKa'
                 target='_blank'
               >
-                <img src='/images/qr_donate.jpg' alt='QR Code Pix Donate' />
+                <img
+                  src='/images/qr_donate.jpg'
+                  alt='QR Code Pix Donate'
+                  data-gtm='pix-qr-code'
+                />
               </a>
 
               <p>
@@ -171,7 +198,12 @@ const Index = ({ feed, repositories }) => {
                 CHAVE PIX: <strong>{PIXKey}</strong>
                 {' - '}
                 {state.clipboardStatus && (
-                  <a onClick={() => copyToClipboard(PIXKey)}>COPIAR</a>
+                  <a
+                    onClick={() => copyToClipboard(PIXKey)}
+                    data-gtm='pix-copy-code'
+                  >
+                    COPIAR
+                  </a>
                 )}
               </p>
             </div>
