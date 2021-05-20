@@ -10,7 +10,7 @@ const App = ({ Component, pageProps }) => {
       gtmId: 'GTM-5XCHHG7',
     }
     TagManager.initialize(tagManagerArgs)
-    hotjar.initialize(2358107, 6)
+    hotjar.initialize(2411738, 6)
   })
 
   return (
