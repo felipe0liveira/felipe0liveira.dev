@@ -16,16 +16,16 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Felipe 0liveira</title>
+        <title>Felipe 0liveira [dev]</title>
 
         {/* Meta Tags */}
         <meta charSet='utf-8' />
-        <meta name='theme-color' content='#c0c0c0' />
+        <meta name='theme-color' content='#1f1f22' />
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1, user-scalable=no'
         />
-        <meta property='og:title' content='Felipe 0liveira (Win98)' />
+        <meta property='og:title' content='Felipe 0liveira [dev]' />
         <meta
           property='og:image'
           content='https://felipe0liveira.dev/images/me.jpg'
@@ -40,7 +40,7 @@ const App = ({ Component, pageProps }) => {
         />
         <meta
           name='keywords'
-          content='desenvolvimento, web, mobile, full stack, front end, back end, frontend, backend, angular, javascript, typescript, windows98, site windows, site 98'
+          content='desenvolvimento, web, mobile, full stack, front end, back end, frontend, backend, angular, javascript, typescript, clojure, kafka, datomic'
         />
         <meta name='robots' content='index, follow' />
 
