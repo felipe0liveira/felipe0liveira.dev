@@ -1,10 +1,9 @@
 @import './_desktop';
 
 .card {
-  padding: 10px;
+  padding: 20px;
 
   background: #ffffff09;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
   .headerImage {
@@ -13,9 +12,6 @@
     height: 150px;
 
     margin-bottom: 10px;
-
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 
     filter: grayscale(30%);
     opacity: 0.7;
