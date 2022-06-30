@@ -1,4 +1,5 @@
 import { Card } from '../../components/Card'
+import { employmentTime } from '../../utils/quickCalcs'
 import './styles.scss'
 
 export const AboutMeSection = () => (
@@ -28,8 +29,8 @@ export const AboutMeSection = () => (
 					It's part of my job to spread my knowledge around the team, I'm so
 					comfortable to teach everybody about things I know.
 					<br />
-					In my 6 year career I learned how to work in different environments,
-					from under pressure to that more flexible.
+					In my {employmentTime} year career I learned how to work in different
+					environments, from under pressure to that more flexible.
 				</p>
 			</Card>
 
