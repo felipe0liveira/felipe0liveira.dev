@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100;200;400&display=swap');
+
 * {
 	outline: none;
 	margin: 0;
@@ -7,4 +9,26 @@
 body {
 	background-color: #141414;
 	color: #fafafa;
+
+	font-family: 'Kantumruy Pro', sans-serif;
+
+	h1 {
+		font-weight: 400;
+		font-size: 80px;
+	}
+
+	h2 {
+		font-weight: 200;
+		font-size: 40px;
+	}
+
+	$bottom-border-height: 15px;
+
+	section {
+		display: flex;
+		width: 100%;
+		height: calc(100vh - $bottom-border-height);
+
+		border-bottom: $bottom-border-height solid #000000;
+	}
 }
