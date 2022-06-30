@@ -37,6 +37,9 @@ body {
 
 	section {
 		display: flex;
+		flex-direction: column;
+		text-align: center;
+
 		min-height: calc(100vh - $bottom-border-height - ($section-y-padding * 2));
 
 		padding: 30px 0;
