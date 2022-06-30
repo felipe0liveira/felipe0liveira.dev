@@ -11,6 +11,12 @@ export const EmploymentHistory = () => (
 
 		<main>
 			<Card>
+				<img
+					src='https://media.giphy.com/media/VInv4mtfvQj8k/giphy.gif'
+					alt='A person spinning'
+				/>
+			</Card>
+			<Card>
 				<h5>Nubank</h5>
 				<small>
 					Software Engineer (Frontend/Backend)
