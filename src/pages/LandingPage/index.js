@@ -1,4 +1,4 @@
-import { WelcomeSection } from '../../sections/welcome'
+import { WelcomeSection } from '../../sections/Welcome'
 import './styles.scss'
 
 export const LandingPage = () => (
