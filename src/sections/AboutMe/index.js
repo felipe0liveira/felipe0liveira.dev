@@ -1,3 +1,4 @@
+import { Card } from '../../components/Card'
 import './styles.scss'
 
 export const AboutMeSection = () => (
@@ -8,18 +9,18 @@ export const AboutMeSection = () => (
 		</header>
 
 		<main>
-			<div className='card'>
+			<Card>
 				<img className='avatar' src='images/me.jpg' alt='black and white me' />
-			</div>
+			</Card>
 
-			<div className='card'>
+			<Card>
 				<p>
 					I need to start talking that I am self-taught and I really discovered
 					that when I wrote my first line of code when I was 8 years old.
 				</p>
-			</div>
+			</Card>
 
-			<div className='card'>
+			<Card>
 				<p>
 					I really love challenges and I think they are the best way to improve
 					my professional skills.
@@ -30,9 +31,9 @@ export const AboutMeSection = () => (
 					In my 6 year career I learned how to work in different environments,
 					from under pressure to that more flexible.
 				</p>
-			</div>
+			</Card>
 
-			<div className='card'>
+			<Card>
 				<p>
 					I'm very open to suggestions like starting new things or solutions.
 					Learning a new technology, programming language or a product really
@@ -44,7 +45,7 @@ export const AboutMeSection = () => (
 					express myself. My career wishes are always connected to learning
 					about companies products and contributing with technology.
 				</p>
-			</div>
+			</Card>
 		</main>
 	</section>
 )
