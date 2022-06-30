@@ -5,7 +5,7 @@ export const SkillsSection = () => (
 	<section className='skills'>
 		<header>
 			<h3>Skills</h3>
-			<h4>what I've been worked with</h4>
+			<h4>what is my super power</h4>
 		</header>
 
 		<main>
