@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"98.css@^0.1.18":
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/98.css/-/98.css-0.1.18.tgz#8c5514edfdccb32ef9e5b10904036ba674c21df7"
+  integrity sha512-I6l22DVVGAeets2KzpWhnbj3vCmP5HrkkZFnN8MhFF0z5yoXLkMM7p5vKCN9ap+Tnb4bFe4kukcMsinpDcnfhQ==
+
 "@next/env@13.0.2":
   version "13.0.2"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.0.2.tgz#5fbd7b4146175ae406edfb4a38b62de8c880c09d"
