@@ -1,7 +1,15 @@
-const IndexPage = () => (
+import Head from 'next/head'
+import { LandingPage } from '../templates/Landing'
+
+const Index = () => (
 	<>
-		<h1>Eita</h1>
+		<Head>
+			<title>felipe0liveira.dev</title>
+			<link rel='shortcut icon' href='favicon.png' type='image/png' />
+		</Head>
+
+		<LandingPage />
 	</>
 )
 
-export default IndexPage
+export default Index

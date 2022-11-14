@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Reset */
+* {
+	outline: none;
+
+	margin: 0;
+	padding: 0;
+}
+
+/* Body defaults */
+body {
+	background-color: #c0c0c0;
+	font-family: 'Pixelated MS Sans Serif', Arial;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	.title {
+		font-family: 'Press Start 2P', cursive;
+		margin: 4px 0;
+	}
+
+	h1 {
+		font-size: 16px;
+	}
+
+	h2 {
+		font-size: 12px;
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	.text-muted {
+		color: #575757;
+	}
+
+	.up-space {
+		margin-top: 16px;
+	}
+
+	.p-space {
+		margin-top: 8px;
+	}
+
+	blockquote {
+		padding: 20px;
+		background: #dfdfdf;
+	}
+
+	main {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		margin-top: 24px;
+		section {
+			width: 700px;
+			max-width: 95%;
+
+			.window {
+				font-size: 16px;
+				.window-body {
+					img {
+						filter: grayscale(100%);
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
