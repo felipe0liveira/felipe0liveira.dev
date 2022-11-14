@@ -1,74 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100;200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/* Reset */
 * {
 	outline: none;
+
 	margin: 0;
 	padding: 0;
 }
 
+/* Body defaults */
 body {
-	background-color: #141414;
-	color: #fafafa;
+	background-color: #c0c0c0;
+	font-family: 'Pixelated MS Sans Serif', Arial;
 
-	font-family: 'Kantumruy Pro', sans-serif;
-
-	small {
-		margin-top: 30px;
-		color: #727272;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	.title {
+		font-family: 'Press Start 2P', cursive;
+		margin: 4px 0;
 	}
 
 	h1 {
-		font-weight: 400;
-		font-size: 45px;
+		font-size: 16px;
 	}
 
 	h2 {
-		font-weight: 200;
-		font-size: 30px;
+		font-size: 12px;
 	}
 
-	h3 {
-		font-weight: 200;
-		font-size: 25px;
-	}
-
-	h4 {
-		font-weight: 100;
-		font-size: 18px;
-	}
-
-	h5 {
-		font-weight: 200;
-		font-size: 17px;
-	}
-
-	hr {
-		margin: 15px 0;
-		border: none;
-		border-top: 3px solid #ffffff0c;
-	}
-
-	$bottom-border-height: 15px;
-	$section-y-padding: 30px;
-
-	section {
-		display: flex;
-		flex-direction: column;
+	.text-center {
 		text-align: center;
+	}
 
-		min-height: calc(100vh - $bottom-border-height - ($section-y-padding * 2));
+	.text-muted {
+		color: #575757;
+	}
 
-		padding: 30px 0;
+	.up-space {
+		margin-top: 16px;
+	}
 
-		border-bottom: $bottom-border-height solid #000000;
+	.p-space {
+		margin-top: 8px;
+	}
 
-		header {
-			margin-bottom: 30px;
-		}
+	blockquote {
+		padding: 20px;
+		background: #dfdfdf;
+	}
 
-		main {
-			@media screen and (min-width: 768px) {
-				margin: 0 20%;
+	main {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		margin-top: 24px;
+		section {
+			width: 700px;
+			max-width: 95%;
+
+			.window {
+				font-size: 16px;
+				.window-body {
+					img {
+						filter: grayscale(100%);
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
