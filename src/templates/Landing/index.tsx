@@ -150,7 +150,7 @@ export const LandingPage = () => (
 			<Window title='Where you can find me'>
 				<>
 					<p>If you want to follow my social media, you can find me at:</p>
-					<div className='status-bar up-space'>
+					<div className='status-bar p-space'>
 						<p className='status-bar-field'>
 							Employment history on
 							<br />
