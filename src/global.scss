@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+// Fonts
+@font-face {
+	font-family: 'Press Start 2P';
+	src: url('/fonts/PressStart2P-Regular.ttf');
+}
 
 /* Reset */
 * {
