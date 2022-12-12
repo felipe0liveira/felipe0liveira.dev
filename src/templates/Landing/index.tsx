@@ -2,18 +2,18 @@ import { Window, WindowState } from '../../components/Window'
 
 export const LandingPage = () => (
 	<main>
-		<section>
-			<blockquote className='text-center'>
-				<h1>felipe0liveira.dev</h1>
-				<h2 className='text-muted'>welcome back to 1998</h2>
-			</blockquote>
-		</section>
-
-		<section title='About me' className='up-space'>
+		<section title='About me'>
 			<Window title='A little bit about myself'>
 				<>
-					<img src='/images/me.JPEG' alt='Pinkman magic' />
 					<p>
+						Heey, my name is Felipe Oliveira.
+						<br />
+						How is it going folks?
+					</p>
+
+					<img className='p-space' src='/images/me.JPEG' alt='Pinkman magic' />
+
+					<p className='p-space'>
 						Normally start talking that I am self-taught and I really discovered
 						that when I wrote my first line of code when I was 8 years old.
 					</p>
