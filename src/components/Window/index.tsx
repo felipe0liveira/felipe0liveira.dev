@@ -51,7 +51,7 @@ export const Window = ({
 					windowState === WindowState.MINIMIZED && 'inactive'
 				}`}
 			>
-				<div className='title-bar-text'>{title}</div>
+				<h1 className='title-bar-text'>{title}</h1>
 				<div className='title-bar-controls'>
 					<button aria-label='Minimize' onClick={minimize}></button>
 					<button aria-label='Maximize' onClick={maximize}></button>

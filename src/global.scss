@@ -17,22 +17,13 @@ body {
 	background-color: #c0c0c0;
 	font-family: 'Pixelated MS Sans Serif', Arial;
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	.title {
-		font-family: 'Press Start 2P', cursive;
-		margin: 4px 0;
-	}
-
 	h1 {
-		font-size: 16px;
+		font-size: 13px;
+		letter-spacing: 0;
 	}
 
-	h2 {
-		font-size: 12px;
+	p {
+		font-size: 17px;
 	}
 
 	.text-center {
