@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "next dev",
 		"start": "next start",
-		"build": "next build && next export"
+		"build": "next build && next export",
+		"clean-install": "rm -rf node_modules .next && yarn"
 	},
 	"description": "My Personal/Professional website",
 	"main": "src/_app.js",
