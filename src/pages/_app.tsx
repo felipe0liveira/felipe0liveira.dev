@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import '98.css/dist/98.css'
-import '../global.scss'
 import { MetaTags } from '../components/Seo'
+import '../global.scss'
 
-export default function MyApp({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
 	return (
 		<>
 			<Head>
@@ -15,3 +14,5 @@ export default function MyApp({ Component, pageProps }) {
 		</>
 	)
 }
+
+export default App

@@ -1,71 +1,63 @@
-// Fonts
-@font-face {
-	font-family: 'Press Start 2P';
-	src: url('/fonts/PressStart2P-Regular.ttf');
-}
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 /* Reset */
 * {
 	outline: none;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #000;
+	color: #fff;
 
 	margin: 0;
 	padding: 0;
-}
 
-/* Body defaults */
-body {
-	background-color: #c0c0c0;
-	font-family: 'Pixelated MS Sans Serif', Arial;
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
-	h1 {
-		font-size: 13px;
-		letter-spacing: 0;
+		section {
+			padding: 1em;
+		}
+	}
+
+	a,
+	a:visited,
+	a:hover,
+	a:active {
+		color: #d1d1d1;
 	}
 
 	p {
-		font-size: 17px;
+		text-align: justify;
 	}
 
-	.text-center {
-		text-align: center;
+	h1,
+	h2 {
+		margin: 0;
 	}
 
-	.text-muted {
-		color: #575757;
+	span {
+		color: #b0b0b0;
 	}
 
-	.up-space {
-		margin-top: 16px;
+	img {
+		filter: grayscale(100%);
+		width: 100%;
 	}
 
-	.p-space {
-		margin-top: 8px;
-	}
-
-	blockquote {
-		padding: 20px;
-		background: #dfdfdf;
-	}
-
-	main {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-
-		margin: 24px 0;
-		section {
-			width: 700px;
-			max-width: 95%;
-
-			.window {
-				font-size: 16px;
-				.window-body {
-					img {
-						filter: grayscale(100%);
-						width: 100%;
-					}
-				}
-			}
-		}
+	hr {
+		border: none;
+		height: 10px;
+		width: 100%;
+		background-color: #111111;
+		margin: 0 0 1em 0;
 	}
 }
+
+// Mobile CSS
+@import './styles/mobile.scss';
+@import './styles/desktop.scss';
