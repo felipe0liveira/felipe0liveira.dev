@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "next dev",
 		"start": "next start",
-		"build": "next build && next export"
+		"build": "next build && next export",
+		"clean-install": "rm -rf node_modules .next && yarn"
 	},
 	"description": "My Personal/Professional website",
 	"main": "src/_app.js",
@@ -20,7 +21,6 @@
 		"typescript": "4.8.4"
 	},
 	"dependencies": {
-		"98.css": "^0.1.18",
 		"next": "^13.0.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
