@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# felipe0liveira [dev]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [minimal-next-app](https://github.com/felipe0liveira/minimal-next-app).
 
 ## Available Scripts
 
