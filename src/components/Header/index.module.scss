@@ -1,0 +1,17 @@
+.Header {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	text-align: center;
+
+	h1 {
+		font-size: 30px;
+		font-weight: 100;
+	}
+	
+	h2 {
+		color: #ffffff5d;
+		font-variant: small-caps;
+		font-size: 14px;
+	}
+}

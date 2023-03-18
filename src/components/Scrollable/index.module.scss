@@ -1,0 +1,22 @@
+.Scrollable {
+	display: grid;
+	gap: 20px;
+
+	overflow-y: auto;
+
+	ul {
+		display: grid;
+		list-style: none;
+		margin: 0;
+		gap: 5px;
+		li {
+			background-color: #ffffff2d;
+			padding: 10px;
+
+			&:hover {
+				background-color: #ffffff5a;
+				cursor: pointer;
+			}
+		}
+	}
+}
